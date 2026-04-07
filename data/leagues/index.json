@@ -1,250 +1,250 @@
 {
-  "lastUpdated": "2026-04-07T17:36:28.889Z",
+  "lastUpdated": "2026-04-07T22:49:55.532Z",
   "leagues": [
     {
       "slug": "legacy-hoops-hopkins-league-session1",
       "season": "spring",
       "name": "Legacy Hoops (Hopkins) Session 1",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:13.569Z"
+      "lastUpdated": "2026-04-07T22:47:14.262Z"
     },
     {
       "slug": "legacy-hoops-hopkins-league-session2",
       "season": "spring",
       "name": "Legacy Hoops (Hopkins) Session 2",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:17.950Z"
+      "lastUpdated": "2026-04-07T22:47:19.954Z"
     },
     {
       "slug": "legacy-hoops-woodbury-spring",
       "season": "spring",
       "name": "Legacy Hoops (Woodbury) Spring",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:21.868Z"
+      "lastUpdated": "2026-04-07T22:47:25.270Z"
     },
     {
       "slug": "baldwin-league",
       "season": "spring",
       "name": "Baldwin-Woodville, WI",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:25.862Z"
+      "lastUpdated": "2026-04-07T22:47:30.646Z"
     },
     {
       "slug": "blaine-league",
       "season": "spring",
       "name": "Blaine",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:29.737Z"
+      "lastUpdated": "2026-04-07T22:47:35.705Z"
     },
     {
       "slug": "cambridge-league",
       "season": "spring",
       "name": "Cambridge",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:33.902Z"
+      "lastUpdated": "2026-04-07T22:47:39.988Z"
     },
     {
       "slug": "champlin-park-league",
       "season": "spring",
       "name": "Champlin Park",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:37.780Z"
+      "lastUpdated": "2026-04-07T22:47:44.631Z"
     },
     {
       "slug": "delano-league",
       "season": "spring",
       "name": "Delano",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:41.615Z"
+      "lastUpdated": "2026-04-07T22:47:49.495Z"
     },
     {
       "slug": "elk-river-league",
       "season": "spring",
       "name": "Elk River",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:45.727Z"
+      "lastUpdated": "2026-04-07T22:47:53.562Z"
     },
     {
       "slug": "faribault-league",
       "season": "spring",
       "name": "Faribault",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:49.547Z"
+      "lastUpdated": "2026-04-07T22:47:57.909Z"
     },
     {
       "slug": "prior-lake-spring-league",
       "season": "spring",
       "name": "Prior Lake (Spring)",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:53.641Z"
+      "lastUpdated": "2026-04-07T22:48:03.346Z"
     },
     {
       "slug": "hope-field-house-rosemount-spring",
       "season": "spring",
       "name": "Hope FH Rosemount (Spring)",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:34:57.501Z"
+      "lastUpdated": "2026-04-07T22:48:07.059Z"
     },
     {
       "slug": "stmichael-albertville",
       "season": "spring",
       "name": "St. Michael-Albertville",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:01.324Z"
+      "lastUpdated": "2026-04-07T22:48:11.532Z"
     },
     {
       "slug": "stillwater-league",
       "season": "spring",
       "name": "Stillwater",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:05.364Z"
+      "lastUpdated": "2026-04-07T22:48:16.939Z"
     },
     {
       "slug": "brainerd-league",
       "season": "summer",
       "name": "Brainerd",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:09.312Z"
+      "lastUpdated": "2026-04-07T22:48:21.578Z"
     },
     {
       "slug": "chanhassen-league",
       "season": "summer",
       "name": "Chanhassen",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:13.317Z"
+      "lastUpdated": "2026-04-07T22:48:25.663Z"
     },
     {
       "slug": "eden-prairie-league",
       "season": "summer",
       "name": "Eden Prairie",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:17.358Z"
+      "lastUpdated": "2026-04-07T22:48:29.792Z"
     },
     {
       "slug": "mbt-blaine",
       "season": "summer",
       "name": "MBT Blaine",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:21.111Z"
+      "lastUpdated": "2026-04-07T22:48:34.862Z"
     },
     {
       "slug": "maple-grove-league",
       "season": "summer",
       "name": "Maple Grove",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:25.168Z"
+      "lastUpdated": "2026-04-07T22:48:40.213Z"
     },
     {
       "slug": "osseo-league",
       "season": "summer",
       "name": "Osseo Maple Grove",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:28.999Z"
+      "lastUpdated": "2026-04-07T22:48:44.482Z"
     },
     {
       "slug": "hope-field-house-rosemount-aug",
       "season": "summer",
       "name": "Hope FH Rosemount (Aug)",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:32.808Z"
+      "lastUpdated": "2026-04-07T22:48:48.811Z"
     },
     {
       "slug": "menomonie",
       "season": "summer",
       "name": "Menomonie, WI",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:36.622Z"
+      "lastUpdated": "2026-04-07T22:48:52.631Z"
     },
     {
       "slug": "prior-lake-summer-league",
       "season": "summer",
       "name": "Prior Lake (Summer)",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:40.425Z"
+      "lastUpdated": "2026-04-07T22:48:57.432Z"
     },
     {
       "slug": "spring-lake-park-league",
       "season": "summer",
       "name": "Spring Lake Park",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:44.299Z"
+      "lastUpdated": "2026-04-07T22:49:02.694Z"
     },
     {
       "slug": "wayzata-league",
       "season": "summer",
       "name": "Wayzata",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:48.193Z"
+      "lastUpdated": "2026-04-07T22:49:07.018Z"
     },
     {
       "slug": "woodbury-league",
       "season": "summer",
       "name": "Legacy Hoops (Woodbury) July",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:52.052Z"
+      "lastUpdated": "2026-04-07T22:49:11.292Z"
     },
     {
       "slug": "alexandria-league",
       "season": "fall",
       "name": "Alexandria",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:55.933Z"
+      "lastUpdated": "2026-04-07T22:49:15.850Z"
     },
     {
       "slug": "andover-league",
       "season": "fall",
       "name": "Andover",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:35:59.769Z"
+      "lastUpdated": "2026-04-07T22:49:20.255Z"
     },
     {
       "slug": "hudson-league",
       "season": "fall",
       "name": "Hudson, WI",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:03.745Z"
+      "lastUpdated": "2026-04-07T22:49:24.065Z"
     },
     {
       "slug": "jordan-league",
       "season": "fall",
       "name": "Jordan",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:07.570Z"
+      "lastUpdated": "2026-04-07T22:49:29.035Z"
     },
     {
       "slug": "lakeville-league",
       "season": "fall",
       "name": "Lakeville",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:11.672Z"
+      "lastUpdated": "2026-04-07T22:49:33.212Z"
     },
     {
       "slug": "mounds-view-league",
       "season": "fall",
       "name": "Mounds View",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:15.510Z"
+      "lastUpdated": "2026-04-07T22:49:37.723Z"
     },
     {
       "slug": "orono-league",
       "season": "fall",
       "name": "Orono",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:19.299Z"
+      "lastUpdated": "2026-04-07T22:49:42.135Z"
     },
     {
       "slug": "river-falls-wi-league",
       "season": "fall",
       "name": "River Falls, WI",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:23.451Z"
+      "lastUpdated": "2026-04-07T22:49:46.983Z"
     },
     {
       "slug": "stmichael-albertville-fall",
       "season": "fall",
       "name": "St. Michael-Albertville (Fall)",
       "status": "ok",
-      "lastUpdated": "2026-04-07T17:36:27.413Z"
+      "lastUpdated": "2026-04-07T22:49:52.315Z"
     }
   ]
 }

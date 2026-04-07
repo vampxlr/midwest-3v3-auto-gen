@@ -273,7 +273,7 @@ async function crawl(onProgress) {
           }
 
           // Dates
-          const datesMatch = bodyText.match(/Dates?:?\s*([^\n]+(?:\n[^\n]+)*?)(?=\n\n|\n[A-Z])/i);
+          const datesMatch = bodyText.match(/(?:(?:Dates|Dates:|Sundays|Mondays|Tuesdays|Wednesdays|Thursdays|Fridays|Saturdays)(?:\s*-\s*[A-Za-z]+)?\s*-?:?)\s*([A-Za-z]+\s*\d{1,2}.*?)(?=\n\n|\n\*\*|\n\*|\n[A-Z]|\nWe accept)/i);
           const dates = datesMatch ? datesMatch[1].replace(/\s+/g, ' ').trim() : '';
 
           // Times
