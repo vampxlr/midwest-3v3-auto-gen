@@ -1,0 +1,24 @@
+{
+  "name": "3v3-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "crawl": "node crawler/crawl.js",
+    "regen": "node -e \"require('./crawler/crawl').regenerateFromData()\"",
+    "fix-locations": "node scripts/fix-locations.js",
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "handlebars": "^4.7.9",
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.59.1"
+  }
+}

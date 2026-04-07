@@ -1,0 +1,127 @@
+MIDWEST 3v3 LANDING PAGE GENERATOR - PROJECT PROMPT
+=====================================================
+Date: 2026-04-07
+
+OVERVIEW:
+---------
+Build a landing page generator system for midwest3on3.com leagues.
+
+TWO PARTS:
+----------
+1. CRAWLER: Goes to https://www.midwest3on3.com/leagues, crawls and finds all league links (Winter/Spring/Summer/Fall sections), then crawls each league's individual page to extract landing page information.
+
+2. LANDING PAGE GENERATOR: Uses extracted info to generate individual landing pages per league with:
+   - Modern design template
+   - Images mirrored from the mother site
+   - Main CTA: "Register Now" button (links to external registration site)
+   - GTM + Meta Pixel + Meta CAPI tracking integration
+   - Each league gets its own landing page URL
+
+ADMIN PORTAL:
+-----------
+- URL: site.com/portal
+- PIN-protected (default: 1234, stored in .env file)
+- Has an "Update" button that triggers Playwright (or other) crawl
+- Updates all league information from mother site
+
+DATA STORAGE:
+------------
+- NO database needed
+- Plain text files in directory
+- Images are always pulled from mother site (https://www.midwest3on3.com) - we mirror them
+- Rarely updates, but portal triggers manual update when needed
+
+TRACKING:
+---------
+- GTM (Google Tag Manager)
+- Meta Pixel
+- Meta CAPI (Conversions API)
+- Track visitors until they leave landing page
+- Register Now CTA goes to external site (not our concern to track beyond that)
+
+FACEBOOK ADS USE CASE:
+----------------------
+- Each ad campaign links to ONE specific landing page
+- Landing pages designed for ad traffic conversion tracking
+- Current site is Squarespace - hard to implement proper tracking
+- This system gives us full control
+
+LANDING PAGE FEATURES:
+----------------------
+- Modern design template
+- League-specific information
+- Register Now button (primary CTA)
+- Template can be updated via Antigravity/Claude based on tracking results
+
+LEAGUES FOUND ON PAGE:
+---------------------
+Winter:
+- (No Winter Leagues at this time)
+
+Spring:
+- Legacy Hoops (Hopkins) Session 1
+- Legacy Hoops (Hopkins) Session 2
+- Legacy Hoops (Woodbury) Spring
+- Baldwin-Woodville, WI
+- Blaine
+- Cambridge
+- Champlin Park
+- Delano
+- Elk River
+- Faribault
+- Prior Lake (Spring)
+- Hope FH Rosemount (Spring)
+- St. Michael-Albertville
+- Stillwater
+
+Summer:
+- Brainerd
+- Chanhassen
+- Eden Prairie
+- MBT Blaine + K-3 Skills
+- Maple Grove
+- Osseo Maple Grove
+- Hope FH Rosemount (Aug)
+- Menomonie, WI
+- Prior Lake (Summer)
+- Spring Lake Park
+- Wayzata
+- Legacy Hoops (Woodbury) July
+
+Fall:
+- Alexandria
+- Andover
+- Hudson, WI
+- Jordan
+- Lakeville
+- Mounds View
+- Orono
+- River Falls, WI
+- St. Michael-Albertville (Fall)
+
+TECHNICAL APPROACH:
+------------------
+- Crawling: Playwright (preferred) or Python requests/BeautifulSoup
+- Frontend: HTML/CSS/JS (modern design)
+- Portal: Password-protected admin UI
+- Storage: Plain text/JSON files in directory
+- Images: Referenced from mother site or mirrored locally
+
+WORKFLOW:
+---------
+1. Admin visits /portal, enters PIN
+2. Clicks "Update" button
+3. Playwright crawls https://www.midwest3on3.com/leagues
+4. For each league link found, crawls the individual page
+5. Extracts: title, description, dates, location, images, registration link
+6. Saves to plain text/JSON files
+7. Landing pages auto-generate from template + stored data
+8. Pages are live at /leagues/[league-slug]
+
+NOTES:
+------
+- This is for Facebook Ads traffic
+- Need proper GTM/Meta tracking
+- Template will be updated based on tracking results
+- Portal should be at yourdomain.com/portal
+- Mother site: https://www.midwest3on3.com
