@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andover League — Midwest 3 on 3 | Midwest 3 on 3</title>
+  <meta name="description" content="Register now for Andover League — Midwest 3 on 3. Sundays - Fall - TBD at Andover High School, Andover, MN 55304. Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Open Graph for Facebook Ads previews -->
+  <meta property="og:title" content="Andover League — Midwest 3 on 3" />
+  <meta property="og:description" content="Sundays - Fall - TBD · Andover High School · Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches" />
+  <meta property="og:image" content="http://localhost:3000/images/leagues/fall/andover-league.jpg" />
+  <meta property="og:url" content="http://localhost:3000/leagues/fall/andover-league" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange: #FF6B1A;
+      --orange-light: #FF8C42;
+      --orange-dark: #E55A08;
+      --black: #0A0A0B;
+      --dark: #111114;
+      --dark-2: #1A1A1F;
+      --dark-3: #22222A;
+      --dark-4: #2E2E38;
+      --mid: #3D3D4A;
+      --text: #F0F0F5;
+      --text-muted: #9999B0;
+      --text-dim: #6666780;
+      --white: #FFFFFF;
+      --green: #22C55E;
+      --radius: 14px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.4);
+      --shadow-lg: 0 8px 48px rgba(0,0,0,0.6);
+      --glow: 0 0 40px rgba(255, 107, 26, 0.25);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--black);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem 4rem;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero__bg-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.25) saturate(0.8);
+    }
+
+    .hero__bg-gradient {
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,107,26,0.18) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(10,10,11,0.3) 0%, rgba(10,10,11,0.7) 60%, var(--black) 100%);
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      width: 100%;
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,26,0.15);
+      border: 1px solid rgba(255,107,26,0.35);
+      color: var(--orange-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero__badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero__logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero__logo-img {
+      height: 52px;
+      width: auto;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
+    }
+
+    .hero__logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.05em;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .hero__logo-sub {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .hero__season {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      line-height: 1.0;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .hero__title span {
+      color: var(--orange);
+    }
+
+    .hero__edition {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero__meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .hero__meta-chip svg { flex-shrink: 0; }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+      color: var(--white);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 18px 48px;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 32px rgba(255,107,26,0.45), var(--glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 48px rgba(255,107,26,0.6), var(--glow);
+    }
+
+    .cta-btn:hover::before { opacity: 1; }
+    .cta-btn:active { transform: translateY(0) scale(0.99); }
+
+    .cta-btn svg { transition: transform 0.25s; }
+    .cta-btn:hover svg { transform: translateX(4px); }
+
+    .hero__scroll-hint {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── SECTION COMMON ──────────────────────────────────────── */
+    .section {
+      padding: 5rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 2.5rem;
+      line-height: 1.2;
+    }
+
+    /* ── DETAILS SECTION ─────────────────────────────────────── */
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .detail-card {
+      background: var(--dark-2);
+      border: 1px solid var(--dark-4);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .detail-card:hover {
+      border-color: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    .detail-card__icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255,107,26,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .detail-card__label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .detail-card__value {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    /* ── PRICING SECTION ─────────────────────────────────────── */
+    .pricing-wrap {
+      background: var(--dark-2);
+      border: 1px solid var(--dark-4);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .pricing-header {
+      background: linear-gradient(135deg, rgba(255,107,26,0.15) 0%, transparent 100%);
+      border-bottom: 1px solid var(--dark-4);
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .pricing-header__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,107,26,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pricing-header__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .pricing-header__sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-tiers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .pricing-tier {
+      padding: 2rem;
+      position: relative;
+    }
+
+    .pricing-tier:first-child {
+      border-right: 1px solid var(--dark-4);
+    }
+
+    .pricing-tier__label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-tier__label--final {
+      color: var(--text-muted);
+    }
+
+    .pricing-tier__price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3rem;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .pricing-tier__unit {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-tier__deadline {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .pricing-tier__deadline-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .pricing-savings {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(34,197,94,0.12);
+      border: 1px solid rgba(34,197,94,0.25);
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-top: 0.5rem;
+    }
+
+    .pricing-cta {
+      padding: 2rem;
+      border-top: 1px solid var(--dark-4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255,107,26,0.04);
+    }
+
+    .pricing-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* ── ELIGIBILITY ─────────────────────────────────────────── */
+    .eligibility-box {
+      background: var(--dark-2);
+      border: 1px solid var(--dark-4);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .eligibility-box__icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255,107,26,0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .eligibility-box__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .eligibility-box__text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .eligibility-box__rules {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .eligibility-rule {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .eligibility-rule::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: var(--orange);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── DIVIDER ─────────────────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--dark-4), transparent);
+      margin: 0;
+    }
+
+    /* ── BOTTOM CTA SECTION ──────────────────────────────────── */
+    .bottom-cta {
+      background: linear-gradient(180deg, var(--black) 0%, var(--dark-2) 50%, var(--black) 100%);
+      padding: 5rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bottom-cta::before {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,107,26,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .bottom-cta__content { position: relative; max-width: 600px; margin: 0 auto; }
+
+    .bottom-cta__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+
+    .bottom-cta__title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .bottom-cta__sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────────── */
+    .footer {
+      background: var(--dark);
+      border-top: 1px solid var(--dark-4);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    .footer a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .pricing-tiers { grid-template-columns: 1fr; }
+      .pricing-tier:first-child { border-right: none; border-bottom: 1px solid var(--dark-4); }
+      .pricing-tier__price { font-size: 2.25rem; }
+      .details-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 90vh; }
+    }
+
+    /* ── ANIMATIONS ─────────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.7s ease forwards; }
+    .fade-up-1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-up-2 { animation-delay: 0.2s; opacity: 0; }
+    .fade-up-3 { animation-delay: 0.35s; opacity: 0; }
+    .fade-up-4 { animation-delay: 0.5s; opacity: 0; }
+    .fade-up-5 { animation-delay: 0.65s; opacity: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- GTM noscript -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+        <img class="hero__bg-img" src="/images/leagues/fall/andover-league.jpg" alt="Andover League — Midwest 3 on 3" />
+      <div class="hero__bg-gradient"></div>
+    </div>
+
+    <div class="hero__content">
+      <!-- Badge -->
+      <div class="hero__badge fade-up fade-up-1">
+        <span class="hero__badge-dot"></span>
+        14th Annual · Registration Open
+      </div>
+
+      <!-- Logo -->
+      <div class="hero__logo fade-up fade-up-1">
+        <img class="hero__logo-img" src="/assets/images/mw3-logo.png" alt="Midwest 3 on 3 Logo"
+             onerror="this.style.display='none'" />
+        <div>
+          <div class="hero__logo-text">Midwest 3 on 3</div>
+          <div class="hero__logo-sub">Basketball Leagues</div>
+        </div>
+      </div>
+
+      <!-- Season -->
+      <div class="hero__season fade-up fade-up-2">⚡ fall Season 2026</div>
+
+      <!-- Title -->
+      <h1 class="hero__title fade-up fade-up-2">Andover League — Midwest 3 on 3</h1>
+
+      <p class="hero__edition fade-up fade-up-2">14th Annual</p>
+
+      <!-- Quick info chips -->
+      <div class="hero__meta fade-up fade-up-3">
+        <div class="hero__meta-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#FF6B1A">
+            <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/><circle cx="12" cy="10" r="2"/>
+          </svg>
+          Andover High School, Andover, MN 55304
+        </div>
+        <div class="hero__meta-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#FF6B1A">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Sundays - Fall - TBD
+        </div>
+        <div class="hero__meta-chip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#FF6B1A">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          4:00 - 9:00 PM (we accept schedule requests to help work around other activities)
+        </div>
+      </div>
+
+      <!-- Primary CTA -->
+      <a href="" class="cta-btn fade-up fade-up-4" id="hero-register-btn" target="_blank" rel="noopener"
+         onclick="trackRegClick('hero')">
+        Register Now
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+      Scroll for details
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── DETAILS SECTION ── -->
+  <section class="section" id="details">
+    <p class="section-label">League Details</p>
+    <h2 class="section-title">Everything You Need to Know</h2>
+
+    <div class="details-grid">
+
+      <div class="detail-card">
+        <div class="detail-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/><circle cx="12" cy="10" r="2"/>
+          </svg>
+        </div>
+        <div>
+          <div class="detail-card__label">Location</div>
+          <div class="detail-card__value">
+            Andover High School<br/>
+            2115 145th Ave NW<br/>
+            Andover, MN 55304
+          </div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <div class="detail-card__label">Dates</div>
+          <div class="detail-card__value">Sundays - Fall - TBD</div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div>
+          <div class="detail-card__label">Game Times</div>
+          <div class="detail-card__value">4:00 - 9:00 PM (we accept schedule requests to help work around other activities)</div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div>
+          <div class="detail-card__label">Who Can Play</div>
+          <div class="detail-card__value">Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches</div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <div>
+          <div class="detail-card__label">Team Format</div>
+          <div class="detail-card__value">Register as a team of 3–6 players. No coaches.</div>
+        </div>
+      </div>
+
+      <div class="detail-card">
+        <div class="detail-card__icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="detail-card__label">Admission</div>
+          <div class="detail-card__value">No spectator admission fees</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ── PRICING SECTION ── -->
+
+  <!-- ── BOTTOM CTA SECTION ── -->
+  <section class="bottom-cta" id="register">
+    <div class="bottom-cta__content">
+      <div class="bottom-cta__eyebrow">Don't Miss Out</div>
+      <h2 class="bottom-cta__title">Spots Fill Up Fast.<br/>Register Today.</h2>
+      <p class="bottom-cta__sub">
+        Join hundreds of teams across Minnesota and Wisconsin in the premier 3-on-3 basketball experience.
+        Dates: Sundays - Fall - TBD.
+      </p>
+      <a href="" class="cta-btn" id="bottom-register-btn" target="_blank" rel="noopener"
+         onclick="trackRegClick('bottom')">
+        Register Now — It's Time to Play
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p>
+      &copy; 2026 Midwest 3 on 3 Basketball &mdash;
+      <a href="https://www.midwest3on3.com" target="_blank" rel="noopener">midwest3on3.com</a>
+    </p>
+    <p style="margin-top: 4px;">
+      <a href="https://www.midwest3on3.com/leagues/fall/andover-league" target="_blank" rel="noopener" style="color: var(--text-muted);">View on midwest3on3.com →</a>
+    </p>
+  </footer>
+
+  <!-- ── TRACKING JS ── -->
+  <script>
+    // Register Now click tracking
+    function trackRegClick(position) {
+      var league = 'andover-league';
+      var season = 'fall';
+
+      // Meta Pixel: Lead event on Register Now click
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+          content_name: 'Andover League — Midwest 3 on 3',
+          content_category: season + '/' + league,
+          value: 275,
+          currency: 'USD'
+        });
+      }
+
+      // GTM dataLayer push
+      if (typeof dataLayer !== 'undefined') {
+        dataLayer.push({
+          event: 'register_click',
+          league: league,
+          season: season,
+          position: position,
+          title: 'Andover League — Midwest 3 on 3'
+        });
+      }
+
+      // Server-side CAPI track call (fire and forget)
+      try {
+        fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: 'Lead',
+            slug: league,
+            season: season,
+            position: position,
+            url: window.location.href,
+            fbp: getCookie('_fbp'),
+            fbc: getCookie('_fbc')
+          })
+        });
+      } catch(e) {}
+    }
+
+    function getCookie(name) {
+      var match = document.cookie.match(new RegExp('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)'));
+      return match ? match.pop() : '';
+    }
+
+    // Scroll depth tracking
+    var scrollDepths = [25, 50, 75, 100];
+    var depthsFired = {};
+    window.addEventListener('scroll', function() {
+      var pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      scrollDepths.forEach(function(d) {
+        if (pct >= d && !depthsFired[d]) {
+          depthsFired[d] = true;
+          if (typeof dataLayer !== 'undefined') {
+            dataLayer.push({ event: 'scroll_depth', depth: d, league: 'andover-league' });
+          }
+        }
+      });
+    }, { passive: true });
+  </script>
+
+</body>
+</html>

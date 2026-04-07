@@ -1,0 +1,30 @@
+{
+  "season": "summer",
+  "slug": "chanhassen-league",
+  "name": "Chanhassen",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/summer/chanhassen-league",
+  "title": "Chanhassen League — Midwest 3 on 3",
+  "edition": "14th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611951282322-FGZZD65T06AENHL5KVMN/IMG_1382.jpg",
+  "location": {
+    "venue": "Chanhassen High School",
+    "address": "2200 Lyman Blvd",
+    "city": "Chanhassen, MN 55317"
+  },
+  "dates": "Sundays - Summer -",
+  "times": "2:00 - 9:30 pm",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (entering 2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:35:13.317Z",
+  "localImage": "/images/leagues/summer/chanhassen-league.jpg"
+}

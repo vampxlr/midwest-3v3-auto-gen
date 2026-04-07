@@ -1,6 +1,9 @@
 'use strict';
 
-require('dotenv').config();
+// Load .env only in local dev — Vercel injects env vars natively
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 
 const express = require('express');
 const path = require('path');
@@ -74,13 +77,27 @@ app.get('/api/leagues', (req, res) => {
 });
 
 // ─── API: Trigger Crawl (SSE streaming) ───────────────────────────────────
+// NOTE: Crawl is DISABLED on Vercel (serverless = read-only fs + no Playwright).
+// Run `npm run crawl` locally, commit the generated files, then redeploy.
 app.post('/api/portal/update', (req, res) => {
   const { pin } = req.body;
   if (pin !== PORTAL_PIN) {
     return res.status(401).json({ error: 'Invalid PIN' });
   }
 
-  // Set up Server-Sent Events
+  // Detect Vercel (or any read-only serverless environment)
+  if (process.env.VERCEL || process.env.NOW_REGION) {
+    // Respond with SSE format so the portal UI still handles it gracefully
+    res.setHeader('Content-Type', 'text/event-stream');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.flushHeaders();
+    const msg = JSON.stringify({ message: '⚠️  Crawl is not available on Vercel. Run `npm run crawl` locally, commit the output, and redeploy.' });
+    res.write(`data: ${msg}\n\n`);
+    res.write('data: {"done":true,"error":true}\n\n');
+    return res.end();
+  }
+
+  // Set up Server-Sent Events for local use
   res.setHeader('Content-Type', 'text/event-stream');
   res.setHeader('Cache-Control', 'no-cache');
   res.setHeader('Connection', 'keep-alive');
@@ -111,10 +128,14 @@ app.post('/api/portal/update', (req, res) => {
 });
 
 // ─── API: Regenerate from existing data (no crawl) ────────────────────────
+// NOTE: Also disabled on Vercel — filesystem is read-only after deploy.
 app.post('/api/portal/regenerate', (req, res) => {
   const { pin } = req.body;
   if (pin !== PORTAL_PIN) {
     return res.status(401).json({ error: 'Invalid PIN' });
+  }
+  if (process.env.VERCEL || process.env.NOW_REGION) {
+    return res.status(503).json({ success: false, error: 'Regenerate is not available on Vercel. Run npm run regen locally and redeploy.' });
   }
   const { regenerateFromData } = require('./crawler/crawl');
   const count = regenerateFromData();
@@ -188,13 +209,20 @@ app.get('/', (req, res) => {
   res.redirect('/portal');
 });
 
-// ─── Start Server ──────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🏀 Midwest 3v3 Landing Page Generator`);
-  console.log(`   Server running at http://localhost:${PORT}`);
-  console.log(`   Admin portal: http://localhost:${PORT}/portal`);
-  console.log(`   GTM: ${GTM_ID || '(not set)'}`);
-  console.log(`   Meta Pixel: ${PIXEL_ID || '(not set)'}`);
-  console.log(`   Meta CAPI: ${CAPI_TOKEN && CAPI_TOKEN !== 'YOUR_CAPI_ACCESS_TOKEN_HERE' ? 'Configured' : '(not set)'}`);
-  console.log(`\n   Edit .env to configure tracking IDs and PIN.\n`);
-});
+// ─── Export for Vercel (serverless) ───────────────────────────────────────
+// @vercel/node requires the Express app to be the default export.
+module.exports = app;
+
+// ─── Start Server (local dev only) ────────────────────────────────────────
+// When run directly with `node server.js` or `npm start`, listen on PORT.
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`\n🏀 Midwest 3v3 Landing Page Generator`);
+    console.log(`   Server running at http://localhost:${PORT}`);
+    console.log(`   Admin portal: http://localhost:${PORT}/portal`);
+    console.log(`   GTM: ${GTM_ID || '(not set)'}`);
+    console.log(`   Meta Pixel: ${PIXEL_ID || '(not set)'}`);
+    console.log(`   Meta CAPI: ${CAPI_TOKEN && CAPI_TOKEN !== 'YOUR_CAPI_ACCESS_TOKEN_HERE' ? 'Configured' : '(not set)'}`);
+    console.log(`\n   Edit .env to configure tracking IDs and PIN.\n`);
+  });
+}

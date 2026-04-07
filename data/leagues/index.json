@@ -1,0 +1,250 @@
+{
+  "lastUpdated": "2026-04-07T17:36:28.889Z",
+  "leagues": [
+    {
+      "slug": "legacy-hoops-hopkins-league-session1",
+      "season": "spring",
+      "name": "Legacy Hoops (Hopkins) Session 1",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:13.569Z"
+    },
+    {
+      "slug": "legacy-hoops-hopkins-league-session2",
+      "season": "spring",
+      "name": "Legacy Hoops (Hopkins) Session 2",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:17.950Z"
+    },
+    {
+      "slug": "legacy-hoops-woodbury-spring",
+      "season": "spring",
+      "name": "Legacy Hoops (Woodbury) Spring",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:21.868Z"
+    },
+    {
+      "slug": "baldwin-league",
+      "season": "spring",
+      "name": "Baldwin-Woodville, WI",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:25.862Z"
+    },
+    {
+      "slug": "blaine-league",
+      "season": "spring",
+      "name": "Blaine",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:29.737Z"
+    },
+    {
+      "slug": "cambridge-league",
+      "season": "spring",
+      "name": "Cambridge",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:33.902Z"
+    },
+    {
+      "slug": "champlin-park-league",
+      "season": "spring",
+      "name": "Champlin Park",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:37.780Z"
+    },
+    {
+      "slug": "delano-league",
+      "season": "spring",
+      "name": "Delano",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:41.615Z"
+    },
+    {
+      "slug": "elk-river-league",
+      "season": "spring",
+      "name": "Elk River",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:45.727Z"
+    },
+    {
+      "slug": "faribault-league",
+      "season": "spring",
+      "name": "Faribault",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:49.547Z"
+    },
+    {
+      "slug": "prior-lake-spring-league",
+      "season": "spring",
+      "name": "Prior Lake (Spring)",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:53.641Z"
+    },
+    {
+      "slug": "hope-field-house-rosemount-spring",
+      "season": "spring",
+      "name": "Hope FH Rosemount (Spring)",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:34:57.501Z"
+    },
+    {
+      "slug": "stmichael-albertville",
+      "season": "spring",
+      "name": "St. Michael-Albertville",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:01.324Z"
+    },
+    {
+      "slug": "stillwater-league",
+      "season": "spring",
+      "name": "Stillwater",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:05.364Z"
+    },
+    {
+      "slug": "brainerd-league",
+      "season": "summer",
+      "name": "Brainerd",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:09.312Z"
+    },
+    {
+      "slug": "chanhassen-league",
+      "season": "summer",
+      "name": "Chanhassen",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:13.317Z"
+    },
+    {
+      "slug": "eden-prairie-league",
+      "season": "summer",
+      "name": "Eden Prairie",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:17.358Z"
+    },
+    {
+      "slug": "mbt-blaine",
+      "season": "summer",
+      "name": "MBT Blaine",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:21.111Z"
+    },
+    {
+      "slug": "maple-grove-league",
+      "season": "summer",
+      "name": "Maple Grove",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:25.168Z"
+    },
+    {
+      "slug": "osseo-league",
+      "season": "summer",
+      "name": "Osseo Maple Grove",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:28.999Z"
+    },
+    {
+      "slug": "hope-field-house-rosemount-aug",
+      "season": "summer",
+      "name": "Hope FH Rosemount (Aug)",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:32.808Z"
+    },
+    {
+      "slug": "menomonie",
+      "season": "summer",
+      "name": "Menomonie, WI",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:36.622Z"
+    },
+    {
+      "slug": "prior-lake-summer-league",
+      "season": "summer",
+      "name": "Prior Lake (Summer)",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:40.425Z"
+    },
+    {
+      "slug": "spring-lake-park-league",
+      "season": "summer",
+      "name": "Spring Lake Park",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:44.299Z"
+    },
+    {
+      "slug": "wayzata-league",
+      "season": "summer",
+      "name": "Wayzata",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:48.193Z"
+    },
+    {
+      "slug": "woodbury-league",
+      "season": "summer",
+      "name": "Legacy Hoops (Woodbury) July",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:52.052Z"
+    },
+    {
+      "slug": "alexandria-league",
+      "season": "fall",
+      "name": "Alexandria",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:55.933Z"
+    },
+    {
+      "slug": "andover-league",
+      "season": "fall",
+      "name": "Andover",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:35:59.769Z"
+    },
+    {
+      "slug": "hudson-league",
+      "season": "fall",
+      "name": "Hudson, WI",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:03.745Z"
+    },
+    {
+      "slug": "jordan-league",
+      "season": "fall",
+      "name": "Jordan",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:07.570Z"
+    },
+    {
+      "slug": "lakeville-league",
+      "season": "fall",
+      "name": "Lakeville",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:11.672Z"
+    },
+    {
+      "slug": "mounds-view-league",
+      "season": "fall",
+      "name": "Mounds View",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:15.510Z"
+    },
+    {
+      "slug": "orono-league",
+      "season": "fall",
+      "name": "Orono",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:19.299Z"
+    },
+    {
+      "slug": "river-falls-wi-league",
+      "season": "fall",
+      "name": "River Falls, WI",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:23.451Z"
+    },
+    {
+      "slug": "stmichael-albertville-fall",
+      "season": "fall",
+      "name": "St. Michael-Albertville (Fall)",
+      "status": "ok",
+      "lastUpdated": "2026-04-07T17:36:27.413Z"
+    }
+  ]
+}

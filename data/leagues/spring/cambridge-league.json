@@ -1,0 +1,30 @@
+{
+  "season": "spring",
+  "slug": "cambridge-league",
+  "name": "Cambridge",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/spring/cambridge-league",
+  "title": "Cambridge League — Midwest 3 on 3",
+  "edition": "8th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611949170451-OVARCJVSMB906N9R48YH/boys%2B3%2Bon%2B3%2Bfingers.jpg",
+  "location": {
+    "venue": "",
+    "address": "",
+    "city": ""
+  },
+  "dates": "Sundays - Spring - March 29, April 12, 19 & 26",
+  "times": "4:00pm - 9:30pm",
+  "eligibility": "Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "March 5",
+    "cost": "$285/team"
+  },
+  "finalReg": {
+    "deadline": "March 18",
+    "cost": "$300/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/245624506",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:34:33.902Z",
+  "localImage": "/images/leagues/spring/cambridge-league.jpg"
+}

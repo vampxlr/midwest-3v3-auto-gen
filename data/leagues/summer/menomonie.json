@@ -1,0 +1,30 @@
+{
+  "season": "summer",
+  "slug": "menomonie",
+  "name": "Menomonie, WI",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/summer/menomonie",
+  "title": "Menomonie 3 on 3 Basketball League — Midwest 3 on 3",
+  "edition": "3rd Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/9e260fe0-f7bd-4685-8b5d-53fe982cd29c/Screenshot+2024-06-12+at+3.13.04%E2%80%AFPM.jpg",
+  "location": {
+    "venue": "Menomonie High School",
+    "address": "1715 5th St W, Menomonie, WI 54751",
+    "city": "1715 5th St W, Menomonie, WI 54751"
+  },
+  "dates": "Sundays - Summer - TBD",
+  "times": "2:00 - 9:00pm",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (entering 2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:35:36.622Z",
+  "localImage": "/images/leagues/summer/menomonie.jpg"
+}

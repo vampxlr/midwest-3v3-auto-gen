@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/leagues/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/portal",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ]
+}

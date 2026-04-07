@@ -1,0 +1,30 @@
+{
+  "season": "fall",
+  "slug": "mounds-view-league",
+  "name": "Mounds View",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/fall/mounds-view-league",
+  "title": "Mounds View League — Midwest 3 on 3",
+  "edition": "18th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611952992854-A9QCGJ01IGNBNHC152ZK/14.jpg",
+  "location": {
+    "venue": "",
+    "address": "",
+    "city": "Mounds View High School   1900 Lake Valentine Rd, Arden Hills, MN 55112"
+  },
+  "dates": "Sundays - Fall - TBD",
+  "times": "3:30 - 9:00 (we accept schedule requests to help work around other activities)",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:36:15.510Z",
+  "localImage": "/images/leagues/fall/mounds-view-league.jpg"
+}

@@ -1,0 +1,30 @@
+{
+  "season": "spring",
+  "slug": "hope-field-house-rosemount-spring",
+  "name": "Hope FH Rosemount (Spring)",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/spring/hope-field-house-rosemount-spring",
+  "title": "Hope Fieldhouse (Rosemount) Spring — Midwest 3 on 3",
+  "edition": "3rd Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611952102709-LBKRP1R4C957RZJFBFDA/10.jpg",
+  "location": {
+    "venue": "Hope Fieldhouse",
+    "address": "2645 145th St. W.",
+    "city": "Rosemount, MN 55068"
+  },
+  "dates": "Sundays - Spring - June 14, 21 & 28 (8 games on three dates - each team will play four games on one of the three league dates)",
+  "times": "3:00pm - 9:00pm",
+  "eligibility": "Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "May 21",
+    "cost": "$285/team"
+  },
+  "finalReg": {
+    "deadline": "June 3",
+    "cost": "$300/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/117448473",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:34:57.501Z",
+  "localImage": "/images/leagues/spring/hope-field-house-rosemount-spring.jpg"
+}

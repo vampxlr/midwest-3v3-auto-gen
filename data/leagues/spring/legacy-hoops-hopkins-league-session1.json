@@ -1,0 +1,30 @@
+{
+  "season": "spring",
+  "slug": "legacy-hoops-hopkins-league-session1",
+  "name": "Legacy Hoops (Hopkins) Session 1",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/spring/legacy-hoops-hopkins-league-session1",
+  "title": "Legacy Hoops Hopkins Session 1 — Midwest 3 on 3",
+  "edition": "15th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611877983944-T3W3V6AT0XANS7K7C4FN/IMG_0813.jpg",
+  "location": {
+    "venue": "Legacy Hoops Basketball Academy",
+    "address": "1002 Second Street NE",
+    "city": "Hopkins, MN 55343"
+  },
+  "dates": "d March 15th",
+  "times": "11:00am - 9:30pm",
+  "eligibility": "Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "Feb 26",
+    "cost": "$285/team"
+  },
+  "finalReg": {
+    "deadline": "March 11",
+    "cost": "$300/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/725694473",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:34:13.569Z",
+  "localImage": "/images/leagues/spring/legacy-hoops-hopkins-league-session1.jpg"
+}

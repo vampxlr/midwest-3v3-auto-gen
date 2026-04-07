@@ -1,0 +1,30 @@
+{
+  "season": "spring",
+  "slug": "legacy-hoops-woodbury-spring",
+  "name": "Legacy Hoops (Woodbury) Spring",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/spring/legacy-hoops-woodbury-spring",
+  "title": "Legacy Hoops (Woodbury) Spring — Midwest 3 on 3",
+  "edition": "1st Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/84f08fbd-a38b-4862-9cc6-650eb797a4fe/Screenshot+2026-01-08+at+12.09.25%E2%80%AFPM.png",
+  "location": {
+    "venue": "Legacy Hoops Academy",
+    "address": "2122 Wooddale Dr,",
+    "city": "Woodbury, MN 55125"
+  },
+  "dates": "Master Schedule - Will be posted 5-7 days before the first play date",
+  "times": "5:00 pm - 9:30pm",
+  "eligibility": "Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "April 2",
+    "cost": "$285/team"
+  },
+  "finalReg": {
+    "deadline": "April 15",
+    "cost": "$300/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/448861435",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:34:21.868Z",
+  "localImage": "/images/leagues/spring/legacy-hoops-woodbury-spring.png"
+}

@@ -1,0 +1,30 @@
+{
+  "season": "summer",
+  "slug": "eden-prairie-league",
+  "name": "Eden Prairie",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/summer/eden-prairie-league",
+  "title": "Eden Prairie League — Midwest 3 on 3",
+  "edition": "4th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/73ce4cbc-ec22-4f08-b2a7-42d817b21721/Screen+Shot+2022-03-04+at+6.36.08+PM.jpg",
+  "location": {
+    "venue": "Eden Prairie High School",
+    "address": "17185 Valley View Rd,",
+    "city": "Eden Prairie, MN 55346"
+  },
+  "dates": "Sundays - Summer - May 31, June 7, 14 & 21",
+  "times": "4:00 pm - 9:00 pm",
+  "eligibility": "Boys and Girls graduation years 2036- 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "May 7",
+    "cost": "$285/team"
+  },
+  "finalReg": {
+    "deadline": "May 20",
+    "cost": "$300/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/113500928",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:35:17.358Z",
+  "localImage": "/images/leagues/summer/eden-prairie-league.jpg"
+}

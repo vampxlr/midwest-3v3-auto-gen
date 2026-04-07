@@ -1,0 +1,30 @@
+{
+  "season": "fall",
+  "slug": "andover-league",
+  "name": "Andover",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/fall/andover-league",
+  "title": "Andover League — Midwest 3 on 3",
+  "edition": "14th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611952102709-LBKRP1R4C957RZJFBFDA/10.jpg",
+  "location": {
+    "venue": "Andover High School",
+    "address": "2115 145th Ave NW",
+    "city": "Andover, MN 55304"
+  },
+  "dates": "Sundays - Fall - TBD",
+  "times": "4:00 - 9:00 PM (we accept schedule requests to help work around other activities)",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:35:59.769Z",
+  "localImage": "/images/leagues/fall/andover-league.jpg"
+}

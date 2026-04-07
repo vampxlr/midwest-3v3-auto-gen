@@ -1,0 +1,30 @@
+{
+  "season": "fall",
+  "slug": "lakeville-league",
+  "name": "Lakeville",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/fall/lakeville-league",
+  "title": "Lakeville League — Midwest 3 on 3",
+  "edition": "10th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611952862375-9LHVOPH8J6TUHDD5D8H4/IMG_4312.jpg",
+  "location": {
+    "venue": "Lakeville South High School",
+    "address": "21135 Jacquard Avenue",
+    "city": "Lakeville, MN 55044"
+  },
+  "dates": "Sundays - Fall - TBD",
+  "times": "4:00 - 9:00PM (we accept schedule requests to help work around other activities)",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:36:11.672Z",
+  "localImage": "/images/leagues/fall/lakeville-league.jpg"
+}

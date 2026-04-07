@@ -1,0 +1,30 @@
+{
+  "season": "spring",
+  "slug": "blaine-league",
+  "name": "Blaine",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/spring/blaine-league",
+  "title": "Blaine League — Midwest 3 on 3",
+  "edition": "15th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611878388518-D0QJCME6WAO4POKYD86Z/IMG_0869.jpg",
+  "location": {
+    "venue": "Blaine High School",
+    "address": "12555 University Ave NE",
+    "city": "Blaine, MN 55434"
+  },
+  "dates": "Sundays - Spring - April 26, May 3, 10 & 17",
+  "times": "4:00 - 9:30 pm",
+  "eligibility": "Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "April 2",
+    "cost": "$285/team"
+  },
+  "finalReg": {
+    "deadline": "April 15",
+    "cost": "$300/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/349205630",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:34:29.737Z",
+  "localImage": "/images/leagues/spring/blaine-league.jpg"
+}

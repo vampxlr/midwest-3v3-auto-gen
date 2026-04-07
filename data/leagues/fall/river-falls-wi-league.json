@@ -1,0 +1,30 @@
+{
+  "season": "fall",
+  "slug": "river-falls-wi-league",
+  "name": "River Falls, WI",
+  "sourceUrl": "https://www.midwest3on3.com/river-falls-wi-league",
+  "title": "River Falls (WI) League — Midwest 3 on 3",
+  "edition": "5th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1628555484852-KPRDY1QBX1YES00LRIQL/IMG_1454.jpg",
+  "location": {
+    "venue": "River Falls High School",
+    "address": "818 Cemetery Road",
+    "city": "River Falls, WI 54022"
+  },
+  "dates": "Sundays - Sundays, October 12, 19, 26 & November 2",
+  "times": "4:00 - 9:00",
+  "eligibility": "Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "September 18",
+    "cost": "$275/team"
+  },
+  "finalReg": {
+    "deadline": "October 1",
+    "cost": "$290/team"
+  },
+  "registerUrl": "https://midwest3on3.sportngin.com/register/form/726516937",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:36:23.451Z",
+  "localImage": "/images/leagues/fall/river-falls-wi-league.jpg"
+}

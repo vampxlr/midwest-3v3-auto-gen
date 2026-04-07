@@ -1,0 +1,30 @@
+{
+  "season": "fall",
+  "slug": "jordan-league",
+  "name": "Jordan",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/fall/jordan-league",
+  "title": "Jordan League — Midwest 3 on 3",
+  "edition": "11th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1611952741183-ZFWTQ1LODFIF4BJAJGSU/13.jpg",
+  "location": {
+    "venue": "",
+    "address": "",
+    "city": ""
+  },
+  "dates": "Sundays - Fall -",
+  "times": "3:00 - 8:00pm",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:36:07.570Z",
+  "localImage": "/images/leagues/fall/jordan-league.jpg"
+}

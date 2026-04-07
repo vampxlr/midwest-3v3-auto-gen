@@ -1,0 +1,30 @@
+{
+  "season": "fall",
+  "slug": "alexandria-league",
+  "name": "Alexandria",
+  "sourceUrl": "https://www.midwest3on3.com/leagues/fall/alexandria-league",
+  "title": "Alexandria League — Midwest 3 on 3",
+  "edition": "6th Annual",
+  "imageUrl": "https://images.squarespace-cdn.com/content/v1/5ff7371bc1e5975da370431e/1625670594434-3UT0AXZ1QPSG81GLL0OW/Girls+in+blue+smiling.jpg",
+  "location": {
+    "venue": "Alexandria High School",
+    "address": "4300 Pioneer Rd SE, Alexandria, MN 56308",
+    "city": "4300 Pioneer Rd SE, Alexandria, MN 56308"
+  },
+  "dates": "Sundays - Fall - TBD",
+  "times": "10:40 AM - 9:00 PM (we accept schedule requests to help work around other activities)",
+  "eligibility": "Boys and Girls graduation years 2037 - 2027 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches",
+  "earlyBird": {
+    "deadline": "",
+    "cost": ""
+  },
+  "finalReg": {
+    "deadline": "",
+    "cost": ""
+  },
+  "registerUrl": "",
+  "shirtsWeek1": true,
+  "shirtsWeek2": true,
+  "lastUpdated": "2026-04-07T17:35:55.933Z",
+  "localImage": "/images/leagues/fall/alexandria-league.jpg"
+}
