@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.midwest3on3.com)",
+      "Bash(node -e \"require\\('dotenv'\\).config\\(\\); const {regenerateFromData} = require\\('./crawler/crawl'\\); regenerateFromData\\(\\);\")"
+    ]
+  }
+}

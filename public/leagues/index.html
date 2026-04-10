@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 League Locations | Midwest 3 on 3 Basketball</title>
+  <meta name="description" content="Find a Midwest 3 on 3 basketball league near you. 38 leagues across Minnesota and Wisconsin in Spring, Summer, and Fall seasons." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta property="og:title" content="2026 League Locations — Midwest 3 on 3" />
+  <meta property="og:description" content="38 leagues across MN & WI — Spring, Summer, and Fall seasons. Find your city and register today." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:       #FF6B1A;
+      --orange-dark:  #D95500;
+      --orange-light: #FF8C42;
+      --orange-pale:  #FFF5EE;
+      --orange-border:#FFE0CC;
+
+      --spring:       #16A34A;
+      --spring-bg:    #F0FDF4;
+      --spring-border:#BBF7D0;
+
+      --summer:       #D97706;
+      --summer-bg:    #FFFBEB;
+      --summer-border:#FDE68A;
+
+      --fall:         #DC2626;
+      --fall-bg:      #FEF2F2;
+      --fall-border:  #FECACA;
+
+      --bg:           #FFFFFF;
+      --bg-alt:       #F7F7F7;
+      --bg-dark:      #0F0F0F;
+
+      --text:         #111111;
+      --text-2:       #333333;
+      --text-muted:   #666666;
+      --text-light:   #999999;
+
+      --border:       #E8E8E8;
+
+      --shadow-xs: 0 1px 4px rgba(0,0,0,0.06);
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow:    0 4px 24px rgba(0,0,0,0.1);
+
+      --radius:    12px;
+      --radius-lg: 20px;
+      --radius-full: 100px;
+
+      --max-w: 1200px;
+      --nav-h: 66px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── NAV ──────────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-logo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .nav-logo-sub {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+    .nav-count {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .nav-count span {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: var(--bg-dark);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 600px;
+      background: radial-gradient(ellipse, rgba(255,107,26,0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,26,0.14);
+      border: 1px solid rgba(255,107,26,0.35);
+      color: #FFAC78;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: blink 2s ease-in-out infinite;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      color: #fff;
+      line-height: 1.0;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .hero-title span { color: var(--orange); }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: #fff;
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--orange); }
+    .hero-stat-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── FILTER BAR ───────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 90;
+      padding: 0 1.5rem;
+    }
+    .filter-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 0.75rem 0;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .filter-btn:hover { border-color: var(--orange); color: var(--orange); }
+    .filter-btn.active {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(255,107,26,0.3);
+    }
+    .filter-btn .badge {
+      background: rgba(0,0,0,0.1);
+      border-radius: var(--radius-full);
+      padding: 1px 7px;
+      font-size: 0.65rem;
+    }
+    .filter-btn.active .badge { background: rgba(255,255,255,0.25); }
+
+    .filter-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 7px 14px;
+      flex-shrink: 0;
+    }
+    .filter-search input {
+      border: none;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text);
+      outline: none;
+      width: 140px;
+    }
+    .filter-search input::placeholder { color: var(--text-light); }
+
+    /* ── LEAGUES CONTENT ─────────────────────────────────────── */
+    .leagues-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .season-section {
+      margin-bottom: 4rem;
+    }
+    .season-section[data-season] { display: block; }
+    .season-section.hidden { display: none !important; }
+
+    .season-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .season-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+    .season-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      color: var(--text);
+    }
+    .season-count-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      height: 26px;
+      padding: 0 9px;
+      border-radius: var(--radius-full);
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .season-spring .season-count-badge { background: var(--spring-bg); color: var(--spring); border: 1px solid var(--spring-border); }
+    .season-summer .season-count-badge { background: var(--summer-bg); color: var(--summer); border: 1px solid var(--summer-border); }
+    .season-fall   .season-count-badge { background: var(--fall-bg);   color: var(--fall);   border: 1px solid var(--fall-border); }
+
+    .league-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ── LEAGUE CARD ─────────────────────────────────────────── */
+    .league-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+      transition: transform 0.28s cubic-bezier(.22,.68,0,1.1), box-shadow 0.28s, border-color 0.2s;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+    .league-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: rgba(255,107,26,0.3);
+    }
+
+    .card-img {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+      background: var(--bg-alt);
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+    .league-card:hover .card-img img {
+      transform: scale(1.05);
+    }
+    .card-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,10,11,0.65) 100%);
+    }
+    .card-season-pill {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      font-size: 0.63rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+    .pill-spring { background: var(--spring-bg); color: var(--spring); }
+    .pill-summer { background: var(--summer-bg); color: var(--summer); }
+    .pill-fall   { background: var(--fall-bg);   color: var(--fall);   }
+
+    .card-body {
+      padding: 1.25rem 1.4rem 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .card-meta-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .card-meta-row svg { flex-shrink: 0; margin-top: 2px; }
+
+    .card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: center;
+      padding: 11px 18px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      margin-top: 0.75rem;
+      transition: background 0.2s;
+    }
+    .card-cta:hover { background: var(--orange-dark); }
+
+    /* ── NO RESULTS ───────────────────────────────────────────── */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      color: var(--text-muted);
+    }
+    .no-results.visible { display: block; }
+    .no-results-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .no-results-text { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+    .no-results-sub  { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer {
+      background: #0A0A0A;
+      border-top: 1px solid #1F1F1F;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.78rem;
+    }
+    .footer a { color: var(--orange); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .footer-note { margin-top: 5px; color: #444; }
+
+    /* ── ANIMATIONS ──────────────────────────────────────────── */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .league-grid { grid-template-columns: 1fr; }
+      .filter-search { display: none; }
+      .hero-stats { gap: 1.25rem; }
+      .nav-logo-sub { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="https://www.midwest3on3.com" class="nav-logo" target="_blank" rel="noopener">
+        <img src="/assets/images/mw3-logo.png" alt="Midwest 3 on 3"
+             onerror="this.style.display='none'" />
+        <div>
+          <div class="nav-logo-name">Midwest 3 on 3</div>
+          <div class="nav-logo-sub">Basketball Leagues</div>
+        </div>
+      </a>
+      <div class="nav-count">
+        <span>38</span> leagues available for 2026
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        2026 Season &middot; Registration Open
+      </div>
+      <h1 class="hero-title">Find Your<br/><span>League</span></h1>
+      <p class="hero-sub">
+        Midwest 3 on 3 basketball leagues across Minnesota and Wisconsin.<br/>
+        Spring, Summer, and Fall seasons — find a location near you.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">15</div>
+          <div class="hero-stat-label">Spring Leagues</div>
+        </div>
+        <div class="hero-stat" style="opacity:0.3;font-size:2rem;line-height:1;color:#fff;">|</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">12</div>
+          <div class="hero-stat-label">Summer Leagues</div>
+        </div>
+        <div class="hero-stat" style="opacity:0.3;font-size:2rem;line-height:1;color:#fff;">|</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">11</div>
+          <div class="hero-stat-label">Fall Leagues</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FILTER BAR ─────────────────────────────────────────── -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all" onclick="filterLeagues('all', this)">
+        All Seasons
+        <span class="badge">38</span>
+      </button>
+      <button class="filter-btn" data-filter="spring" onclick="filterLeagues('spring', this)">
+        🌱 Spring
+        <span class="badge">15</span>
+      </button>
+      <button class="filter-btn" data-filter="summer" onclick="filterLeagues('summer', this)">
+        ☀️ Summer
+        <span class="badge">12</span>
+      </button>
+      <button class="filter-btn" data-filter="fall" onclick="filterLeagues('fall', this)">
+        🍂 Fall
+        <span class="badge">11</span>
+      </button>
+      <div class="filter-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search city or location…" oninput="searchLeagues(this.value)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LEAGUES ────────────────────────────────────────────── -->
+  <div class="leagues-wrap">
+
+    <!-- Spring -->
+    <div class="season-section season-spring" data-season="spring" id="spring">
+      <div class="season-heading">
+        <div class="season-icon">🌱</div>
+        <div class="season-name">Spring 2026</div>
+        <div class="season-count-badge">15</div>
+      </div>
+      <div class="league-grid">
+        <a class="league-card reveal" href="/leagues/spring/baldwin-league"
+           data-name="Baldwin-Woodville, WI" data-city="Woodville, WI 54028">
+          <div class="card-img">
+              <img src="/images/leagues/spring/baldwin-league.jpg" alt="Baldwin-Woodville, WI" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Baldwin-Woodville, WI</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Woodville, WI 54028
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                May 3, 10, 17 &amp; 31 (skip May 24)
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/blaine-league"
+           data-name="Blaine" data-city="Blaine, MN 55434">
+          <div class="card-img">
+              <img src="/images/leagues/spring/blaine-league.jpg" alt="Blaine" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Blaine</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Blaine, MN 55434
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                April 26, May 3, 10 &amp; 17
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/cambridge-league"
+           data-name="Cambridge" data-city="">
+          <div class="card-img">
+              <img src="/images/leagues/spring/cambridge-league.jpg" alt="Cambridge" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Cambridge</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                March 29, April 12, 19 &amp; 26
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/champlin-park-league"
+           data-name="Champlin Park" data-city="Champlin, MN 55316">
+          <div class="card-img">
+              <img src="/images/leagues/spring/champlin-park-league.jpg" alt="Champlin Park" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Champlin Park</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Champlin, MN 55316
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                h 22, 29, April 12 &amp; 19 (skip April 5 - Easter)
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/delano-league"
+           data-name="Delano" data-city="Delano, MN 55328">
+          <div class="card-img">
+              <img src="/images/leagues/spring/delano-league.jpg" alt="Delano" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Delano</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Delano, MN 55328
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                April 12, 19, 26 &amp; May 3
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/elk-river-league"
+           data-name="Elk River" data-city="Elk River, MN 55330">
+          <div class="card-img">
+              <img src="/images/leagues/spring/elk-river-league.jpg" alt="Elk River" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Elk River</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Elk River, MN 55330
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                April 12, 19, 26 &amp; May 3
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/faribault-league"
+           data-name="Faribault" data-city="Faribault, MN 55021">
+          <div class="card-img">
+              <img src="/images/leagues/spring/faribault-league.jpg" alt="Faribault" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Faribault</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Faribault, MN 55021
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                l 12, 26, May 3 &amp; 10
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/hope-field-house-rosemount-aug"
+           data-name="Hope FH Rosemount (Aug)" data-city="Rosemount, MN 55068">
+          <div class="card-img">
+              <img src="/images/leagues/spring/hope-field-house-rosemount-aug.jpg" alt="Hope FH Rosemount (Aug)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Hope FH Rosemount (Aug)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Rosemount, MN 55068
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                Master Schedule - Will be posted 5-7 days before the first play date
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/hope-field-house-rosemount-spring"
+           data-name="Hope FH Rosemount (Spring)" data-city="Rosemount, MN 55068">
+          <div class="card-img">
+              <img src="/images/leagues/spring/hope-field-house-rosemount-spring.jpg" alt="Hope FH Rosemount (Spring)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Hope FH Rosemount (Spring)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Rosemount, MN 55068
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                June 14, 21 &amp; 28 (8 games on three dates - each team will play four games on one of the three league dates)
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/legacy-hoops-hopkins-league-session1"
+           data-name="Legacy Hoops (Hopkins) Session 1" data-city="Hopkins, MN 55343">
+          <div class="card-img">
+              <img src="/images/leagues/spring/legacy-hoops-hopkins-league-session1.jpg" alt="Legacy Hoops (Hopkins) Session 1" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Legacy Hoops (Hopkins) Session 1</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Hopkins, MN 55343
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                March 22, 29, April 12 &amp; 19
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/legacy-hoops-hopkins-league-session2"
+           data-name="Legacy Hoops (Hopkins) Session 2" data-city="Hopkins, MN 55343">
+          <div class="card-img">
+              <img src="/images/leagues/spring/legacy-hoops-hopkins-league-session2.jpg" alt="Legacy Hoops (Hopkins) Session 2" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Legacy Hoops (Hopkins) Session 2</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Hopkins, MN 55343
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                April 26, May 3, 10 &amp; 17
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/legacy-hoops-woodbury-spring"
+           data-name="Legacy Hoops (Woodbury) Spring" data-city="Woodbury, MN 55125">
+          <div class="card-img">
+              <img src="/images/leagues/spring/legacy-hoops-woodbury-spring.png" alt="Legacy Hoops (Woodbury) Spring" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Legacy Hoops (Woodbury) Spring</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Woodbury, MN 55125
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                April 26, May 3, 10 &amp; 17
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/prior-lake-spring-league"
+           data-name="Prior Lake (Spring)" data-city="Prior Lake, MN 55372">
+          <div class="card-img">
+              <img src="/images/leagues/spring/prior-lake-spring-league.jpg" alt="Prior Lake (Spring)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Prior Lake (Spring)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Prior Lake, MN 55372
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                April 12, 19, 26 &amp; May 3
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/stillwater-league"
+           data-name="Stillwater" data-city="Stillwater, MN 55082">
+          <div class="card-img">
+              <img src="/images/leagues/spring/stillwater-league.jpg" alt="Stillwater" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Stillwater</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Stillwater, MN 55082
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                h 22, 29, April 19 &amp; 26
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/spring/stmichael-albertville"
+           data-name="St. Michael-Albertville" data-city="St. Michael, MN 55376">
+          <div class="card-img">
+              <img src="/images/leagues/spring/stmichael-albertville.jpg" alt="St. Michael-Albertville" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">St. Michael-Albertville</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                St. Michael, MN 55376
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                May 3, 10, 17 &amp; 31 (skip May 24)
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Summer -->
+    <div class="season-section season-summer" data-season="summer" id="summer">
+      <div class="season-heading">
+        <div class="season-icon">☀️</div>
+        <div class="season-name">Summer 2026</div>
+        <div class="season-count-badge">12</div>
+      </div>
+      <div class="league-grid">
+        <a class="league-card reveal" href="/leagues/summer/brainerd-league"
+           data-name="Brainerd" data-city="Baxter, MN 56425">
+          <div class="card-img">
+              <img src="/images/leagues/summer/brainerd-league.jpg" alt="Brainerd" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Brainerd</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Baxter, MN 56425
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/chanhassen-league"
+           data-name="Chanhassen" data-city="Chanhassen, MN 55317">
+          <div class="card-img">
+              <img src="/images/leagues/summer/chanhassen-league.jpg" alt="Chanhassen" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Chanhassen</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Chanhassen, MN 55317
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/eden-prairie-league"
+           data-name="Eden Prairie" data-city="Eden Prairie, MN 55346">
+          <div class="card-img">
+              <img src="/images/leagues/summer/eden-prairie-league.jpg" alt="Eden Prairie" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Eden Prairie</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Eden Prairie, MN 55346
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                May 31, June 7, 14 &amp; 21
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/hope-field-house-rosemount-aug"
+           data-name="Hope FH Rosemount (Aug)" data-city="Rosemount, MN 55068">
+          <div class="card-img">
+              <img src="/images/leagues/summer/hope-field-house-rosemount-aug.jpg" alt="Hope FH Rosemount (Aug)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Hope FH Rosemount (Aug)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Rosemount, MN 55068
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/maple-grove-league"
+           data-name="Maple Grove" data-city="">
+          <div class="card-img">
+              <img src="/images/leagues/summer/maple-grove-league.jpg" alt="Maple Grove" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Maple Grove</div>
+            <div class="card-meta">
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/mbt-blaine"
+           data-name="MBT Blaine" data-city="Far West Building">
+          <div class="card-img">
+              <img src="/images/leagues/summer/mbt-blaine.png" alt="MBT Blaine" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">MBT Blaine</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Far West Building
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                y 31, June 7, 14 &amp; 21
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/menomonie"
+           data-name="Menomonie, WI" data-city="1715 5th St W, Menomonie, WI 54751">
+          <div class="card-img">
+              <img src="/images/leagues/summer/menomonie.jpg" alt="Menomonie, WI" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Menomonie, WI</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                1715 5th St W, Menomonie, WI 54751
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/osseo-league"
+           data-name="Osseo Maple Grove" data-city="">
+          <div class="card-img">
+              <img src="/images/leagues/summer/osseo-league.jpg" alt="Osseo Maple Grove" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Osseo Maple Grove</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                August 2, 9, 16 &amp; 23
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/prior-lake-summer-league"
+           data-name="Prior Lake (Summer)" data-city="Savage, MN 55378">
+          <div class="card-img">
+              <img src="/images/leagues/summer/prior-lake-summer-league.jpg" alt="Prior Lake (Summer)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Prior Lake (Summer)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Savage, MN 55378
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/spring-lake-park-league"
+           data-name="Spring Lake Park" data-city="">
+          <div class="card-img">
+              <img src="/images/leagues/summer/spring-lake-park-league.jpg" alt="Spring Lake Park" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Spring Lake Park</div>
+            <div class="card-meta">
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/wayzata-league"
+           data-name="Wayzata" data-city="Plymouth, MN 55446">
+          <div class="card-img">
+              <img src="/images/leagues/summer/wayzata-league.jpg" alt="Wayzata" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Wayzata</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Plymouth, MN 55446
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                e 28, July 12, 19 &amp; 26
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/summer/woodbury-league"
+           data-name="Legacy Hoops (Woodbury) July" data-city="Woodbury, MN 55125">
+          <div class="card-img">
+              <img src="/images/leagues/summer/woodbury-league.jpg" alt="Legacy Hoops (Woodbury) July" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Legacy Hoops (Woodbury) July</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Woodbury, MN 55125
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Fall -->
+    <div class="season-section season-fall" data-season="fall" id="fall">
+      <div class="season-heading">
+        <div class="season-icon">🍂</div>
+        <div class="season-name">Fall 2026</div>
+        <div class="season-count-badge">11</div>
+      </div>
+      <div class="league-grid">
+        <a class="league-card reveal" href="/leagues/fall/alexandria-league"
+           data-name="Alexandria" data-city="4300 Pioneer Rd SE, Alexandria, MN 56308">
+          <div class="card-img">
+              <img src="/images/leagues/fall/alexandria-league.jpg" alt="Alexandria" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Alexandria</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                4300 Pioneer Rd SE, Alexandria, MN 56308
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/andover-league"
+           data-name="Andover" data-city="Andover, MN 55304">
+          <div class="card-img">
+              <img src="/images/leagues/fall/andover-league.jpg" alt="Andover" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Andover</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Andover, MN 55304
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/hudson-league"
+           data-name="Hudson, WI" data-city="Hudson, WI 54016">
+          <div class="card-img">
+              <img src="/images/leagues/fall/hudson-league.jpg" alt="Hudson, WI" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Hudson, WI</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Hudson, WI 54016
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/jordan-league"
+           data-name="Jordan" data-city="">
+          <div class="card-img">
+              <img src="/images/leagues/fall/jordan-league.jpg" alt="Jordan" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Jordan</div>
+            <div class="card-meta">
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/lakeville-league"
+           data-name="Lakeville" data-city="Lakeville, MN 55044">
+          <div class="card-img">
+              <img src="/images/leagues/fall/lakeville-league.jpg" alt="Lakeville" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Lakeville</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Lakeville, MN 55044
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/mounds-view-league"
+           data-name="Mounds View" data-city="Mounds View High School   1900 Lake Valentine Rd, Arden Hills, MN 55112">
+          <div class="card-img">
+              <img src="/images/leagues/fall/mounds-view-league.jpg" alt="Mounds View" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Mounds View</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Mounds View High School   1900 Lake Valentine Rd, Arden Hills, MN 55112
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/orono-league"
+           data-name="Orono" data-city="Long Lake, MN 55356">
+          <div class="card-img">
+              <img src="/images/leagues/fall/orono-league.jpg" alt="Orono" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Orono</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Long Lake, MN 55356
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                r 7, 14, 21 &amp; October 5
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/osseo-league"
+           data-name="Osseo Maple Grove" data-city="">
+          <div class="card-img">
+              <img src="/images/leagues/fall/osseo-league.jpg" alt="Osseo Maple Grove" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Osseo Maple Grove</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                Sundays - Summer - August 2, 9, 16 &amp; 23
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/prior-lake-summer-league"
+           data-name="Prior Lake (Summer)" data-city="Savage, MN 55378">
+          <div class="card-img">
+              <img src="/images/leagues/fall/prior-lake-summer-league.jpg" alt="Prior Lake (Summer)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">Prior Lake (Summer)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                Savage, MN 55378
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                Sundays - Summer - TBD
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/river-falls-wi-league"
+           data-name="River Falls, WI" data-city="River Falls, WI 54022">
+          <div class="card-img">
+              <img src="/images/leagues/fall/river-falls-wi-league.jpg" alt="River Falls, WI" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">River Falls, WI</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                River Falls, WI 54022
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        <a class="league-card reveal" href="/leagues/fall/stmichael-albertville-fall"
+           data-name="St. Michael-Albertville (Fall)" data-city="St. Michael, MN 55376">
+          <div class="card-img">
+              <img src="/images/leagues/fall/stmichael-albertville-fall.png" alt="St. Michael-Albertville (Fall)" loading="lazy" />
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">St. Michael-Albertville (Fall)</div>
+            <div class="card-meta">
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                St. Michael, MN 55376
+              </div>
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                r 7, 14, 21 &amp; 28
+              </div>
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- No results -->
+    <div class="no-results" id="no-results">
+      <div class="no-results-icon">🔍</div>
+      <div class="no-results-text">No leagues found</div>
+      <div class="no-results-sub">Try a different search term or season filter</div>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>
+      &copy; 2026 Midwest 3 on 3 Basketball &mdash;
+      <a href="https://www.midwest3on3.com" target="_blank" rel="noopener">midwest3on3.com</a>
+    </p>
+    <p class="footer-note">Last updated: April 8, 2026</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for card reveal
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el, i) {
+      // stagger within each grid row
+      el.style.transitionDelay = ((i % 4) * 0.07) + 's';
+      observer.observe(el);
+    });
+
+    // Season filter
+    var currentFilter = 'all';
+    var currentSearch = '';
+
+    function filterLeagues(season, btn) {
+      currentFilter = season;
+      document.querySelectorAll('.filter-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    function searchLeagues(q) {
+      currentSearch = q.toLowerCase().trim();
+      applyFilters();
+    }
+
+    function applyFilters() {
+      var sections = document.querySelectorAll('.season-section');
+      var totalVisible = 0;
+
+      sections.forEach(function(section) {
+        var season = section.dataset.season;
+        var seasonMatch = currentFilter === 'all' || currentFilter === season;
+
+        if (!seasonMatch) {
+          section.classList.add('hidden');
+          return;
+        }
+
+        section.classList.remove('hidden');
+
+        var cards = section.querySelectorAll('.league-card');
+        var sectionVisible = 0;
+
+        cards.forEach(function(card) {
+          var name = (card.dataset.name || '').toLowerCase();
+          var city = (card.dataset.city || '').toLowerCase();
+          var searchMatch = !currentSearch || name.includes(currentSearch) || city.includes(currentSearch);
+
+          if (searchMatch) {
+            card.style.display = '';
+            sectionVisible++;
+            totalVisible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide section heading if no cards match
+        section.style.display = sectionVisible === 0 ? 'none' : '';
+      });
+
+      document.getElementById('no-results').classList.toggle('visible', totalVisible === 0);
+    }
+
+    // Scroll to season on page load if hash present
+    var hash = window.location.hash.slice(1);
+    if (hash === 'spring' || hash === 'summer' || hash === 'fall') {
+      window.addEventListener('load', function() {
+        var el = document.getElementById(hash);
+        if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
+      });
+    }
+  </script>
+
+</body>
+</html>

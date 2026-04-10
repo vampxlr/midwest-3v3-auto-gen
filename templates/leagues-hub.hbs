@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2026 League Locations | Midwest 3 on 3 Basketball</title>
+  <meta name="description" content="Find a Midwest 3 on 3 basketball league near you. {{totalCount}} leagues across Minnesota and Wisconsin in Spring, Summer, and Fall seasons." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta property="og:title" content="2026 League Locations — Midwest 3 on 3" />
+  <meta property="og:description" content="{{totalCount}} leagues across MN & WI — Spring, Summer, and Fall seasons. Find your city and register today." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:       #FF6B1A;
+      --orange-dark:  #D95500;
+      --orange-light: #FF8C42;
+      --orange-pale:  #FFF5EE;
+      --orange-border:#FFE0CC;
+
+      --spring:       #16A34A;
+      --spring-bg:    #F0FDF4;
+      --spring-border:#BBF7D0;
+
+      --summer:       #D97706;
+      --summer-bg:    #FFFBEB;
+      --summer-border:#FDE68A;
+
+      --fall:         #DC2626;
+      --fall-bg:      #FEF2F2;
+      --fall-border:  #FECACA;
+
+      --bg:           #FFFFFF;
+      --bg-alt:       #F7F7F7;
+      --bg-dark:      #0F0F0F;
+
+      --text:         #111111;
+      --text-2:       #333333;
+      --text-muted:   #666666;
+      --text-light:   #999999;
+
+      --border:       #E8E8E8;
+
+      --shadow-xs: 0 1px 4px rgba(0,0,0,0.06);
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow:    0 4px 24px rgba(0,0,0,0.1);
+
+      --radius:    12px;
+      --radius-lg: 20px;
+      --radius-full: 100px;
+
+      --max-w: 1200px;
+      --nav-h: 66px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* ── NAV ──────────────────────────────────────────────────── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-xs);
+    }
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-logo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .nav-logo-sub {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+    .nav-count {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .nav-count span {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    /* ── HERO ─────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      background: var(--bg-dark);
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 600px;
+      background: radial-gradient(ellipse, rgba(255,107,26,0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,107,26,0.14);
+      border: 1px solid rgba(255,107,26,0.35);
+      color: #FFAC78;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: blink 2s ease-in-out infinite;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 5.5rem);
+      color: #fff;
+      line-height: 1.0;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .hero-title span { color: var(--orange); }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+      line-height: 1.65;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: #fff;
+      line-height: 1;
+    }
+    .hero-stat-num span { color: var(--orange); }
+    .hero-stat-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+    }
+
+    /* ── FILTER BAR ───────────────────────────────────────────── */
+    .filter-bar {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: var(--nav-h);
+      z-index: 90;
+      padding: 0 1.5rem;
+    }
+    .filter-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 0.75rem 0;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border);
+      background: #fff;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+      user-select: none;
+    }
+    .filter-btn:hover { border-color: var(--orange); color: var(--orange); }
+    .filter-btn.active {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+      box-shadow: 0 2px 12px rgba(255,107,26,0.3);
+    }
+    .filter-btn .badge {
+      background: rgba(0,0,0,0.1);
+      border-radius: var(--radius-full);
+      padding: 1px 7px;
+      font-size: 0.65rem;
+    }
+    .filter-btn.active .badge { background: rgba(255,255,255,0.25); }
+
+    .filter-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      padding: 7px 14px;
+      flex-shrink: 0;
+    }
+    .filter-search input {
+      border: none;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text);
+      outline: none;
+      width: 140px;
+    }
+    .filter-search input::placeholder { color: var(--text-light); }
+
+    /* ── LEAGUES CONTENT ─────────────────────────────────────── */
+    .leagues-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .season-section {
+      margin-bottom: 4rem;
+    }
+    .season-section[data-season] { display: block; }
+    .season-section.hidden { display: none !important; }
+
+    .season-heading {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .season-icon {
+      font-size: 1.75rem;
+      line-height: 1;
+    }
+    .season-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.05em;
+      color: var(--text);
+    }
+    .season-count-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      height: 26px;
+      padding: 0 9px;
+      border-radius: var(--radius-full);
+      font-size: 0.72rem;
+      font-weight: 800;
+    }
+    .season-spring .season-count-badge { background: var(--spring-bg); color: var(--spring); border: 1px solid var(--spring-border); }
+    .season-summer .season-count-badge { background: var(--summer-bg); color: var(--summer); border: 1px solid var(--summer-border); }
+    .season-fall   .season-count-badge { background: var(--fall-bg);   color: var(--fall);   border: 1px solid var(--fall-border); }
+
+    .league-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ── LEAGUE CARD ─────────────────────────────────────────── */
+    .league-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xs);
+      transition: transform 0.28s cubic-bezier(.22,.68,0,1.1), box-shadow 0.28s, border-color 0.2s;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+    }
+    .league-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: rgba(255,107,26,0.3);
+    }
+
+    .card-img {
+      position: relative;
+      height: 160px;
+      overflow: hidden;
+      background: var(--bg-alt);
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform 0.5s ease;
+    }
+    .league-card:hover .card-img img {
+      transform: scale(1.05);
+    }
+    .card-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(10,10,11,0.65) 100%);
+    }
+    .card-season-pill {
+      position: absolute;
+      top: 10px;
+      left: 12px;
+      font-size: 0.63rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+    .pill-spring { background: var(--spring-bg); color: var(--spring); }
+    .pill-summer { background: var(--summer-bg); color: var(--summer); }
+    .pill-fall   { background: var(--fall-bg);   color: var(--fall);   }
+
+    .card-body {
+      padding: 1.25rem 1.4rem 1.4rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .card-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+    }
+    .card-meta-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .card-meta-row svg { flex-shrink: 0; margin-top: 2px; }
+
+    .card-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-align: center;
+      padding: 11px 18px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      margin-top: 0.75rem;
+      transition: background 0.2s;
+    }
+    .card-cta:hover { background: var(--orange-dark); }
+
+    /* ── NO RESULTS ───────────────────────────────────────────── */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 4rem 1.5rem;
+      color: var(--text-muted);
+    }
+    .no-results.visible { display: block; }
+    .no-results-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .no-results-text { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+    .no-results-sub  { font-size: 0.85rem; color: var(--text-muted); }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .footer {
+      background: #0A0A0A;
+      border-top: 1px solid #1F1F1F;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.78rem;
+    }
+    .footer a { color: var(--orange); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .footer-note { margin-top: 5px; color: #444; }
+
+    /* ── ANIMATIONS ──────────────────────────────────────────── */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.in-view { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.16s; }
+    .d3 { transition-delay: 0.24s; }
+    .d4 { transition-delay: 0.32s; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hero { padding: 3.5rem 1.25rem 3rem; }
+      .league-grid { grid-template-columns: 1fr; }
+      .filter-search { display: none; }
+      .hero-stats { gap: 1.25rem; }
+      .nav-logo-sub { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ──────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="https://www.midwest3on3.com" class="nav-logo" target="_blank" rel="noopener">
+        <img src="/assets/images/mw3-logo.png" alt="Midwest 3 on 3"
+             onerror="this.style.display='none'" />
+        <div>
+          <div class="nav-logo-name">Midwest 3 on 3</div>
+          <div class="nav-logo-sub">Basketball Leagues</div>
+        </div>
+      </a>
+      <div class="nav-count">
+        <span>{{totalCount}}</span> leagues available for 2026
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        2026 Season &middot; Registration Open
+      </div>
+      <h1 class="hero-title">Find Your<br/><span>League</span></h1>
+      <p class="hero-sub">
+        Midwest 3 on 3 basketball leagues across Minnesota and Wisconsin.<br/>
+        Spring, Summer, and Fall seasons — find a location near you.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">{{springCount}}</div>
+          <div class="hero-stat-label">Spring Leagues</div>
+        </div>
+        <div class="hero-stat" style="opacity:0.3;font-size:2rem;line-height:1;color:#fff;">|</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">{{summerCount}}</div>
+          <div class="hero-stat-label">Summer Leagues</div>
+        </div>
+        <div class="hero-stat" style="opacity:0.3;font-size:2rem;line-height:1;color:#fff;">|</div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">{{fallCount}}</div>
+          <div class="hero-stat-label">Fall Leagues</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FILTER BAR ─────────────────────────────────────────── -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-btn active" data-filter="all" onclick="filterLeagues('all', this)">
+        All Seasons
+        <span class="badge">{{totalCount}}</span>
+      </button>
+      <button class="filter-btn" data-filter="spring" onclick="filterLeagues('spring', this)">
+        🌱 Spring
+        <span class="badge">{{springCount}}</span>
+      </button>
+      <button class="filter-btn" data-filter="summer" onclick="filterLeagues('summer', this)">
+        ☀️ Summer
+        <span class="badge">{{summerCount}}</span>
+      </button>
+      <button class="filter-btn" data-filter="fall" onclick="filterLeagues('fall', this)">
+        🍂 Fall
+        <span class="badge">{{fallCount}}</span>
+      </button>
+      <div class="filter-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search city or location…" oninput="searchLeagues(this.value)" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LEAGUES ────────────────────────────────────────────── -->
+  <div class="leagues-wrap">
+
+    <!-- Spring -->
+    {{#if springLeagues}}
+    <div class="season-section season-spring" data-season="spring" id="spring">
+      <div class="season-heading">
+        <div class="season-icon">🌱</div>
+        <div class="season-name">Spring 2026</div>
+        <div class="season-count-badge">{{springCount}}</div>
+      </div>
+      <div class="league-grid">
+        {{#each springLeagues}}
+        <a class="league-card reveal" href="/leagues/{{season}}/{{slug}}"
+           data-name="{{name}}" data-city="{{location.city}}">
+          <div class="card-img">
+            {{#if localImage}}
+              <img src="{{localImage}}" alt="{{name}}" loading="lazy" />
+            {{else if imageUrl}}
+              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy" />
+            {{else}}
+              <img src="/assets/images/basketball-default.jpg" alt="{{name}}" loading="lazy" />
+            {{/if}}
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-spring">Spring</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{{name}}</div>
+            <div class="card-meta">
+              {{#if location.city}}
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                {{location.city}}
+              </div>
+              {{/if}}
+              {{#if dates}}
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                {{dates}}
+              </div>
+              {{/if}}
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Summer -->
+    {{#if summerLeagues}}
+    <div class="season-section season-summer" data-season="summer" id="summer">
+      <div class="season-heading">
+        <div class="season-icon">☀️</div>
+        <div class="season-name">Summer 2026</div>
+        <div class="season-count-badge">{{summerCount}}</div>
+      </div>
+      <div class="league-grid">
+        {{#each summerLeagues}}
+        <a class="league-card reveal" href="/leagues/{{season}}/{{slug}}"
+           data-name="{{name}}" data-city="{{location.city}}">
+          <div class="card-img">
+            {{#if localImage}}
+              <img src="{{localImage}}" alt="{{name}}" loading="lazy" />
+            {{else if imageUrl}}
+              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy" />
+            {{else}}
+              <img src="/assets/images/basketball-default.jpg" alt="{{name}}" loading="lazy" />
+            {{/if}}
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-summer">Summer</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{{name}}</div>
+            <div class="card-meta">
+              {{#if location.city}}
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                {{location.city}}
+              </div>
+              {{/if}}
+              {{#if dates}}
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                {{dates}}
+              </div>
+              {{/if}}
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- Fall -->
+    {{#if fallLeagues}}
+    <div class="season-section season-fall" data-season="fall" id="fall">
+      <div class="season-heading">
+        <div class="season-icon">🍂</div>
+        <div class="season-name">Fall 2026</div>
+        <div class="season-count-badge">{{fallCount}}</div>
+      </div>
+      <div class="league-grid">
+        {{#each fallLeagues}}
+        <a class="league-card reveal" href="/leagues/{{season}}/{{slug}}"
+           data-name="{{name}}" data-city="{{location.city}}">
+          <div class="card-img">
+            {{#if localImage}}
+              <img src="{{localImage}}" alt="{{name}}" loading="lazy" />
+            {{else if imageUrl}}
+              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy" />
+            {{else}}
+              <img src="/assets/images/basketball-default.jpg" alt="{{name}}" loading="lazy" />
+            {{/if}}
+            <div class="card-img-overlay"></div>
+            <span class="card-season-pill pill-fall">Fall</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title">{{name}}</div>
+            <div class="card-meta">
+              {{#if location.city}}
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+                  <circle cx="12" cy="10" r="2"/>
+                </svg>
+                {{location.city}}
+              </div>
+              {{/if}}
+              {{#if dates}}
+              <div class="card-meta-row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                {{dates}}
+              </div>
+              {{/if}}
+            </div>
+            <div class="card-cta">
+              Learn More &amp; Register
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+
+    <!-- No results -->
+    <div class="no-results" id="no-results">
+      <div class="no-results-icon">🔍</div>
+      <div class="no-results-text">No leagues found</div>
+      <div class="no-results-sub">Try a different search term or season filter</div>
+    </div>
+
+  </div>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p>
+      &copy; {{year}} Midwest 3 on 3 Basketball &mdash;
+      <a href="https://www.midwest3on3.com" target="_blank" rel="noopener">midwest3on3.com</a>
+    </p>
+    {{#if lastUpdated}}
+    <p class="footer-note">Last updated: {{lastUpdated}}</p>
+    {{/if}}
+  </footer>
+
+  <script>
+    // Intersection Observer for card reveal
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el, i) {
+      // stagger within each grid row
+      el.style.transitionDelay = ((i % 4) * 0.07) + 's';
+      observer.observe(el);
+    });
+
+    // Season filter
+    var currentFilter = 'all';
+    var currentSearch = '';
+
+    function filterLeagues(season, btn) {
+      currentFilter = season;
+      document.querySelectorAll('.filter-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    function searchLeagues(q) {
+      currentSearch = q.toLowerCase().trim();
+      applyFilters();
+    }
+
+    function applyFilters() {
+      var sections = document.querySelectorAll('.season-section');
+      var totalVisible = 0;
+
+      sections.forEach(function(section) {
+        var season = section.dataset.season;
+        var seasonMatch = currentFilter === 'all' || currentFilter === season;
+
+        if (!seasonMatch) {
+          section.classList.add('hidden');
+          return;
+        }
+
+        section.classList.remove('hidden');
+
+        var cards = section.querySelectorAll('.league-card');
+        var sectionVisible = 0;
+
+        cards.forEach(function(card) {
+          var name = (card.dataset.name || '').toLowerCase();
+          var city = (card.dataset.city || '').toLowerCase();
+          var searchMatch = !currentSearch || name.includes(currentSearch) || city.includes(currentSearch);
+
+          if (searchMatch) {
+            card.style.display = '';
+            sectionVisible++;
+            totalVisible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide section heading if no cards match
+        section.style.display = sectionVisible === 0 ? 'none' : '';
+      });
+
+      document.getElementById('no-results').classList.toggle('visible', totalVisible === 0);
+    }
+
+    // Scroll to season on page load if hash present
+    var hash = window.location.hash.slice(1);
+    if (hash === 'spring' || hash === 'summer' || hash === 'fall') {
+      window.addEventListener('load', function() {
+        var el = document.getElementById(hash);
+        if (el) setTimeout(function() { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 300);
+      });
+    }
+  </script>
+
+</body>
+</html>

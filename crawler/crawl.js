@@ -12,6 +12,7 @@ const DATA_DIR = path.join(__dirname, '..', 'data', 'leagues');
 const IMAGES_DIR = path.join(__dirname, '..', 'images', 'leagues');
 const PUBLIC_DIR = path.join(__dirname, '..', 'public', 'leagues');
 const TEMPLATE_PATH = path.join(__dirname, '..', 'templates', 'league-landing.hbs');
+const HUB_TEMPLATE_PATH = path.join(__dirname, '..', 'templates', 'leagues-hub.hbs');
 
 // Ensure directory exists
 function ensureDir(dir) {
@@ -50,6 +51,62 @@ function slugify(name) {
 function loadTemplate() {
   const src = fs.readFileSync(TEMPLATE_PATH, 'utf8');
   return Handlebars.compile(src);
+}
+
+// Generate the hub page (public/leagues/index.html) from all league JSON data
+function generateHubPage() {
+  const seasons = ['spring', 'summer', 'fall'];
+  const grouped = { spring: [], summer: [], fall: [] };
+
+  for (const season of seasons) {
+    const seasonDir = path.join(DATA_DIR, season);
+    if (!fs.existsSync(seasonDir)) continue;
+    fs.readdirSync(seasonDir)
+      .filter(f => f.endsWith('.json'))
+      .forEach(file => {
+        try {
+          const data = JSON.parse(fs.readFileSync(path.join(seasonDir, file), 'utf8'));
+          grouped[season].push(data);
+        } catch (e) {
+          console.error(`  ⚠️  Could not read ${file}: ${e.message}`);
+        }
+      });
+  }
+
+  const src = fs.readFileSync(HUB_TEMPLATE_PATH, 'utf8');
+  const template = Handlebars.compile(src);
+
+  // Format last updated date nicely
+  const indexPath = path.join(DATA_DIR, 'index.json');
+  let lastUpdated = '';
+  if (fs.existsSync(indexPath)) {
+    try {
+      const idx = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+      if (idx.lastUpdated) {
+        lastUpdated = new Date(idx.lastUpdated).toLocaleDateString('en-US', {
+          month: 'long', day: 'numeric', year: 'numeric'
+        });
+      }
+    } catch (e) { /* ignore */ }
+  }
+
+  const context = {
+    year: new Date().getFullYear(),
+    lastUpdated,
+    springLeagues: grouped.spring,
+    summerLeagues: grouped.summer,
+    fallLeagues:   grouped.fall,
+    springCount:   grouped.spring.length,
+    summerCount:   grouped.summer.length,
+    fallCount:     grouped.fall.length,
+    totalCount:    grouped.spring.length + grouped.summer.length + grouped.fall.length,
+  };
+
+  const html = template(context);
+  ensureDir(path.join(__dirname, '..', 'public', 'leagues'));
+  fs.writeFileSync(path.join(__dirname, '..', 'public', 'leagues', 'index.html'), html, 'utf8');
+  console.log(`  🗺️  Hub page generated: public/leagues/index.html (${context.totalCount} leagues)`);
+  return context.totalCount;
 }
 
 // Generate a static HTML landing page from data
@@ -369,6 +426,9 @@ async function crawl(onProgress) {
       'utf8'
     );
 
+    // Generate hub page from freshly-saved data
+    generateHubPage();
+
     const ok = results.filter(r => r.status === 'ok').length;
     log(`\n✅ Crawl complete! ${ok}/${results.length} leagues updated`);
     return results;
@@ -392,7 +452,8 @@ function regenerateFromData() {
       count++;
     });
   }
-  console.log(`✅ Regenerated ${count} landing pages from existing data`);
+  generateHubPage();
+  console.log(`✅ Regenerated ${count} landing pages + hub from existing data`);
   return count;
 }
 

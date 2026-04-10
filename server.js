@@ -68,12 +68,18 @@ app.post('/api/portal/authenticate', (req, res) => {
 // ─── API: Leagues Index ────────────────────────────────────────────────────
 app.get('/api/leagues', (req, res) => {
   const indexPath = path.join(DATA_DIR, 'index.json');
+  const responseData = {
+    isVercel: !!(process.env.VERCEL || process.env.NOW_REGION || process.env.IS_VERCEL === 'true')
+  };
+
   if (fs.existsSync(indexPath)) {
     const data = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-    res.json(data);
+    Object.assign(responseData, data);
   } else {
-    res.json({ lastUpdated: null, leagues: [] });
+    responseData.lastUpdated = null;
+    responseData.leagues = [];
   }
+  res.json(responseData);
 });
 
 // ─── API: Trigger Crawl (SSE streaming) ───────────────────────────────────
@@ -86,7 +92,8 @@ app.post('/api/portal/update', (req, res) => {
   }
 
   // Detect Vercel (or any read-only serverless environment)
-  if (process.env.VERCEL || process.env.NOW_REGION) {
+  const isVercel = !!(process.env.VERCEL || process.env.NOW_REGION || process.env.IS_VERCEL === 'true');
+  if (isVercel) {
     // Respond with SSE format so the portal UI still handles it gracefully
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');

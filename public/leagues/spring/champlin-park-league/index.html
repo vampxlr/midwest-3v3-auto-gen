@@ -42,609 +42,700 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
 
   <style>
+    /* ── RESET ───────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --orange: #FF6B1A;
+      --orange:       #FF6B1A;
+      --orange-dark:  #D95500;
       --orange-light: #FF8C42;
-      --orange-dark: #E55A08;
-      --black: #0A0A0B;
-      --dark: #111114;
-      --dark-2: #1A1A1F;
-      --dark-3: #22222A;
-      --dark-4: #2E2E38;
-      --mid: #3D3D4A;
-      --text: #F0F0F5;
-      --text-muted: #9999B0;
-      --text-dim: #6666780;
-      --white: #FFFFFF;
-      --green: #22C55E;
-      --radius: 14px;
+      --orange-pale:  #FFF5EE;
+      --orange-border:#FFE0CC;
+
+      /* Light theme — matching midwest3on3.com */
+      --bg:           #FFFFFF;
+      --bg-alt:       #F7F7F7;
+      --bg-dark:      #0F0F0F;
+
+      --text:         #111111;
+      --text-2:       #333333;
+      --text-muted:   #666666;
+      --text-light:   #999999;
+
+      --border:       #E8E8E8;
+      --border-strong:#CCCCCC;
+
+      --green:        #16A34A;
+      --green-bg:     #F0FDF4;
+      --green-border: #BBF7D0;
+
+      --shadow-xs: 0 1px 4px rgba(0,0,0,0.06);
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow:    0 4px 24px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 48px rgba(0,0,0,0.15);
+
+      --radius:    12px;
       --radius-lg: 20px;
-      --shadow: 0 4px 24px rgba(0,0,0,0.4);
-      --shadow-lg: 0 8px 48px rgba(0,0,0,0.6);
-      --glow: 0 0 40px rgba(255, 107, 26, 0.25);
+      --radius-xl: 28px;
+      --radius-full: 100px;
+
+      --max-w:   1100px;
+      --max-w-sm: 780px;
+      --nav-h:   66px;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--black);
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--bg);
       color: var(--text);
       min-height: 100vh;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
 
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+
+    /* ── STICKY NAV ──────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    .nav.scrolled { box-shadow: var(--shadow-sm); }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+      flex-shrink: 0;
+    }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-logo-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.04em;
+      line-height: 1;
+    }
+    .nav-logo-sub {
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 1px;
+    }
+
+    .nav-season {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .nav-dot {
+      width: 6px; height: 6px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: blink 2s ease-in-out infinite;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 9px 20px;
+      border-radius: var(--radius-full);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--orange-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(255,107,26,0.4);
+    }
+
     /* ── HERO ────────────────────────────────────────────────── */
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 2rem 1.5rem 4rem;
+      padding: calc(var(--nav-h) + 3rem) 1.5rem 6rem;
       overflow: hidden;
     }
 
-    .hero__bg {
+    .hero-media {
       position: absolute;
       inset: 0;
       z-index: 0;
     }
-
-    .hero__bg-img {
+    .hero-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.25) saturate(0.8);
+      object-position: center top;
+      transform: scale(1.04);
+      animation: heroZoom 8s ease-out forwards;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.04); }
+      to   { transform: scale(1.0); }
     }
 
-    .hero__bg-gradient {
+    .hero-overlay {
       position: absolute;
       inset: 0;
-      background: 
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(255,107,26,0.18) 0%, transparent 70%),
-        linear-gradient(180deg, rgba(10,10,11,0.3) 0%, rgba(10,10,11,0.7) 60%, var(--black) 100%);
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 0%, rgba(255,107,26,0.10) 0%, transparent 55%),
+        linear-gradient(180deg,
+          rgba(10,10,11,0.40) 0%,
+          rgba(10,10,11,0.72) 50%,
+          rgba(10,10,11,0.90) 80%,
+          #0F0F0F 100%
+        );
     }
 
-    .hero__content {
+    .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 760px;
+      max-width: var(--max-w-sm);
       width: 100%;
     }
 
-    .hero__badge {
+    .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255,107,26,0.15);
-      border: 1px solid rgba(255,107,26,0.35);
-      color: var(--orange-light);
-      font-size: 0.75rem;
+      background: rgba(255,107,26,0.16);
+      border: 1px solid rgba(255,107,26,0.38);
+      color: #FFAC78;
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      padding: 6px 16px;
-      border-radius: 100px;
+      padding: 6px 18px;
+      border-radius: var(--radius-full);
       margin-bottom: 1.5rem;
       backdrop-filter: blur(8px);
     }
-
-    .hero__badge-dot {
-      width: 6px;
-      height: 6px;
+    .hero-badge-dot {
+      width: 6px; height: 6px;
       background: var(--orange);
       border-radius: 50%;
-      animation: pulse 2s infinite;
+      animation: blink 2s ease-in-out infinite;
     }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    .hero__logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero__logo-img {
-      height: 52px;
-      width: auto;
-      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
-    }
-
-    .hero__logo-text {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: 0.05em;
-      color: var(--white);
-      line-height: 1;
-    }
-
-    .hero__logo-sub {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    .hero__season {
-      font-size: 0.8rem;
+    .hero-season-label {
+      font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--orange);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.8rem;
     }
 
-    .hero__title {
+    .hero-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-size: clamp(3rem, 9vw, 6rem);
       line-height: 1.0;
-      letter-spacing: 0.02em;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      letter-spacing: 0.03em;
+      color: #ffffff;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 4px 24px rgba(0,0,0,0.35);
     }
 
-    .hero__title span {
-      color: var(--orange);
-    }
-
-    .hero__edition {
+    .hero-edition {
       font-size: 1rem;
       font-weight: 500;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.6);
       letter-spacing: 0.05em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.75rem;
     }
 
-    .hero__meta {
+    .hero-chips {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 0.75rem;
+      gap: 0.65rem;
       margin-bottom: 2.5rem;
     }
-
-    .hero__meta-chip {
+    .hero-chip {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.16);
       backdrop-filter: blur(8px);
       padding: 8px 16px;
-      border-radius: 100px;
-      font-size: 0.82rem;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
       font-weight: 500;
-      color: var(--text);
+      color: rgba(255,255,255,0.92);
     }
+    .hero-chip svg { flex-shrink: 0; }
 
-    .hero__meta-chip svg { flex-shrink: 0; }
-
-    .cta-btn {
+    /* ── BUTTONS ─────────────────────────────────────────────── */
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-      color: var(--white);
-      font-size: 1.05rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
       font-weight: 800;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 18px 48px;
-      border-radius: 100px;
+      padding: 17px 46px;
+      border-radius: var(--radius-full);
       border: none;
       cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 6px 32px rgba(255,107,26,0.45), var(--glow);
+      transition: background 0.22s, transform 0.25s, box-shadow 0.25s;
       position: relative;
       overflow: hidden;
     }
-
-    .cta-btn::before {
+    .btn::before {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.25s;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transition: left 0.55s ease;
+    }
+    .btn:hover::before { left: 100%; }
+    .btn:active { transform: scale(0.97) !important; }
+
+    .btn-primary {
+      background: var(--orange);
+      color: #fff;
+      box-shadow: 0 6px 28px rgba(255,107,26,0.48);
+    }
+    .btn-primary:hover {
+      background: var(--orange-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 40px rgba(255,107,26,0.55);
+    }
+    .btn-primary svg { transition: transform 0.22s; }
+    .btn-primary:hover svg { transform: translateX(4px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--orange);
+      border: 2px solid var(--orange);
+      box-shadow: none;
+    }
+    .btn-outline:hover {
+      background: var(--orange);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255,107,26,0.35);
     }
 
-    .cta-btn:hover {
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 10px 48px rgba(255,107,26,0.6), var(--glow);
-    }
-
-    .cta-btn:hover::before { opacity: 1; }
-    .cta-btn:active { transform: translateY(0) scale(0.99); }
-
-    .cta-btn svg { transition: transform 0.25s; }
-    .cta-btn:hover svg { transform: translateX(4px); }
-
-    .hero__scroll-hint {
+    /* ── SCROLL HINT ─────────────────────────────────────────── */
+    .hero-scroll {
       position: absolute;
-      bottom: 1.5rem;
+      bottom: 2rem;
       left: 50%;
       transform: translateX(-50%);
       z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 6px;
-      color: var(--text-muted);
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
+      gap: 5px;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      animation: bounce 2s infinite;
+      animation: scrollBounce 2.5s ease-in-out infinite;
     }
-
-    @keyframes bounce {
+    @keyframes scrollBounce {
       0%, 100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(6px); }
+      50%       { transform: translateX(-50%) translateY(8px); }
     }
 
-    /* ── SECTION COMMON ──────────────────────────────────────── */
+    /* ── MAIN CONTENT ────────────────────────────────────────── */
+    .main { background: var(--bg); position: relative; z-index: 1; }
+
+    /* ── SECTION LAYOUTS ─────────────────────────────────────── */
     .section {
       padding: 5rem 1.5rem;
-      max-width: 900px;
+      max-width: var(--max-w);
       margin: 0 auto;
+    }
+    .section-alt {
+      background: var(--bg-alt);
+      padding: 4.5rem 1.5rem;
+    }
+    .section-alt-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .section-dark {
+      background: var(--bg-dark);
+      padding: 6rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
     .section-label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--orange);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 2px;
+      background: var(--orange);
+      border-radius: 2px;
+      flex-shrink: 0;
     }
 
     .section-title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 900;
-      color: var(--white);
+      color: var(--text);
       margin-bottom: 2.5rem;
-      line-height: 1.2;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
     }
 
-    /* ── DETAILS SECTION ─────────────────────────────────────── */
-    .details-grid {
+    .divider { height: 1px; background: var(--border); }
+
+    /* ── DETAIL CARDS ────────────────────────────────────────── */
+    .detail-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 1.25rem;
     }
 
     .detail-card {
-      background: var(--dark-2);
-      border: 1px solid var(--dark-4);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.5rem;
       display: flex;
       gap: 1rem;
       align-items: flex-start;
-      transition: border-color 0.2s, transform 0.2s;
+      box-shadow: var(--shadow-xs);
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
     }
-
     .detail-card:hover {
       border-color: var(--orange);
-      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(255,107,26,0.1);
+      transform: translateY(-3px);
+    }
+    .detail-card-icon {
+      width: 44px; height: 44px;
+      min-width: 44px;
+      background: var(--orange-pale);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .detail-card-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+    .detail-card-value {
+      font-size: 0.93rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
     }
 
-    .detail-card__icon {
-      width: 42px;
-      height: 42px;
+    /* ── ELIGIBILITY INFO BOX ────────────────────────────────── */
+    .info-box {
+      background: var(--orange-pale);
+      border: 1px solid var(--orange-border);
+      border-left: 4px solid var(--orange);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    .info-box-icon {
+      width: 44px; height: 44px;
+      min-width: 44px;
       background: rgba(255,107,26,0.12);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
     }
-
-    .detail-card__label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 4px;
-    }
-
-    .detail-card__value {
+    .info-box-title {
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text);
-      line-height: 1.4;
+      margin-bottom: 0.4rem;
     }
-
-    /* ── PRICING SECTION ─────────────────────────────────────── */
-    .pricing-wrap {
-      background: var(--dark-2);
-      border: 1px solid var(--dark-4);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-    }
-
-    .pricing-header {
-      background: linear-gradient(135deg, rgba(255,107,26,0.15) 0%, transparent 100%);
-      border-bottom: 1px solid var(--dark-4);
-      padding: 1.75rem 2rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .pricing-header__icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(255,107,26,0.2);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .pricing-header__title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--white);
-    }
-
-    .pricing-header__sub {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-    }
-
-    .pricing-tiers {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .pricing-tier {
-      padding: 2rem;
-      position: relative;
-    }
-
-    .pricing-tier:first-child {
-      border-right: 1px solid var(--dark-4);
-    }
-
-    .pricing-tier__label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 0.75rem;
-    }
-
-    .pricing-tier__label--final {
-      color: var(--text-muted);
-    }
-
-    .pricing-tier__price {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3rem;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .pricing-tier__unit {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--text-muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .pricing-tier__deadline {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text);
-    }
-
-    .pricing-tier__deadline-label {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      margin-bottom: 2px;
-    }
-
-    .pricing-savings {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: rgba(34,197,94,0.12);
-      border: 1px solid rgba(34,197,94,0.25);
-      color: var(--green);
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 100px;
-      margin-top: 0.5rem;
-    }
-
-    .pricing-cta {
-      padding: 2rem;
-      border-top: 1px solid var(--dark-4);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      background: rgba(255,107,26,0.04);
-    }
-
-    .pricing-note {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    /* ── ELIGIBILITY ─────────────────────────────────────────── */
-    .eligibility-box {
-      background: var(--dark-2);
-      border: 1px solid var(--dark-4);
-      border-radius: var(--radius);
-      padding: 1.75rem 2rem;
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .eligibility-box__icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(255,107,26,0.12);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .eligibility-box__title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 0.5rem;
-    }
-
-    .eligibility-box__text {
-      font-size: 0.9rem;
+    .info-box-body {
+      font-size: 0.87rem;
       color: var(--text-muted);
       line-height: 1.6;
     }
-
-    .eligibility-box__rules {
-      margin-top: 0.75rem;
+    .info-box-rules {
+      margin-top: 0.65rem;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
     }
-
-    .eligibility-rule {
+    .info-box-rule {
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      font-size: 0.82rem;
+      color: var(--text-2);
     }
-
-    .eligibility-rule::before {
+    .info-box-rule::before {
       content: '';
-      width: 5px;
-      height: 5px;
+      width: 5px; height: 5px;
       background: var(--orange);
       border-radius: 50%;
       flex-shrink: 0;
     }
 
-    /* ── DIVIDER ─────────────────────────────────────────────── */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--dark-4), transparent);
-      margin: 0;
-    }
-
-    /* ── BOTTOM CTA SECTION ──────────────────────────────────── */
-    .bottom-cta {
-      background: linear-gradient(180deg, var(--black) 0%, var(--dark-2) 50%, var(--black) 100%);
-      padding: 5rem 1.5rem;
-      text-align: center;
-      position: relative;
+    /* ── PRICING ─────────────────────────────────────────────── */
+    .pricing-wrap {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
       overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .pricing-head {
+      background: var(--orange-pale);
+      border-bottom: 1px solid var(--orange-border);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .pricing-head-icon {
+      width: 44px; height: 44px;
+      background: rgba(255,107,26,0.14);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pricing-head-title { font-size: 1.1rem; font-weight: 800; color: var(--text); }
+    .pricing-head-sub   { font-size: 0.78rem; color: var(--text-muted); }
+
+    .pricing-tiers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .pricing-tier { padding: 2rem; }
+    .pricing-tier:first-child { border-right: 1px solid var(--border); }
+
+    .tier-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.75rem;
+    }
+    .tier-label-muted { color: var(--text-light); }
+
+    .tier-price {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.2rem;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .tier-unit { font-size: 0.78rem; font-weight: 500; color: var(--text-muted); margin-bottom: 0.75rem; }
+    .tier-deadline-label { font-size: 0.68rem; color: var(--text-light); margin-bottom: 2px; }
+    .tier-deadline { font-size: 0.88rem; font-weight: 700; color: var(--text); }
+
+    .tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--green-bg);
+      border: 1px solid var(--green-border);
+      color: var(--green);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      margin-top: 0.6rem;
     }
 
-    .bottom-cta::before {
+    .pricing-cta-row {
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      background: #FAFAFA;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .pricing-note {
+      font-size: 0.74rem;
+      color: var(--text-light);
+      text-align: center;
+      max-width: 440px;
+      line-height: 1.55;
+    }
+
+    /* ── WHY SECTION ─────────────────────────────────────────── */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+    .why-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      box-shadow: var(--shadow-xs);
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-sm);
+      border-color: var(--orange-border);
+    }
+    .why-icon { font-size: 2.2rem; margin-bottom: 0.75rem; }
+    .why-title { font-size: 0.95rem; font-weight: 700; color: var(--text); margin-bottom: 0.35rem; }
+    .why-body  { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
+
+    /* ── BOTTOM CTA ──────────────────────────────────────────── */
+    .section-dark::before {
       content: '';
       position: absolute;
-      bottom: -100px;
-      left: 50%;
+      top: -180px; left: 50%;
       transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(255,107,26,0.12) 0%, transparent 70%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(255,107,26,0.13) 0%, transparent 65%);
       pointer-events: none;
     }
-
-    .bottom-cta__content { position: relative; max-width: 600px; margin: 0 auto; }
-
-    .bottom-cta__eyebrow {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
+    .cta-inner {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .cta-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.24em;
       text-transform: uppercase;
       color: var(--orange);
       margin-bottom: 1rem;
     }
-
-    .bottom-cta__title {
+    .cta-title {
       font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      color: var(--white);
-      line-height: 1.1;
+      font-size: clamp(2.5rem, 7vw, 4.2rem);
+      color: #ffffff;
+      line-height: 1.05;
       margin-bottom: 0.75rem;
     }
-
-    .bottom-cta__sub {
+    .cta-sub {
       font-size: 0.95rem;
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.55);
       margin-bottom: 2.5rem;
+      line-height: 1.65;
     }
 
-    /* ── FOOTER ─────────────────────────────────────────────── */
+    /* ── FOOTER ──────────────────────────────────────────────── */
     .footer {
-      background: var(--dark);
-      border-top: 1px solid var(--dark-4);
+      background: #0A0A0A;
+      border-top: 1px solid #1F1F1F;
       padding: 2rem 1.5rem;
       text-align: center;
-      color: var(--text-muted);
+      color: #555;
       font-size: 0.78rem;
     }
-
-    .footer a {
-      color: var(--orange);
-      text-decoration: none;
-    }
-
+    .footer a { color: var(--orange); text-decoration: none; }
     .footer a:hover { text-decoration: underline; }
 
-    /* ── RESPONSIVE ─────────────────────────────────────────── */
-    @media (max-width: 600px) {
+    /* ── ANIMATIONS ──────────────────────────────────────────── */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s cubic-bezier(.22,.68,0,1.2), transform 0.65s cubic-bezier(.22,.68,0,1.2);
+    }
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .d1 { transition-delay: 0.08s; }
+    .d2 { transition-delay: 0.18s; }
+    .d3 { transition-delay: 0.28s; }
+    .d4 { transition-delay: 0.38s; }
+    .d5 { transition-delay: 0.48s; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .hero-title    { font-size: clamp(2.4rem, 11vw, 3.5rem); }
+      .section       { padding: 3.5rem 1.25rem; }
+      .section-alt   { padding: 3rem 1.25rem; }
       .pricing-tiers { grid-template-columns: 1fr; }
-      .pricing-tier:first-child { border-right: none; border-bottom: 1px solid var(--dark-4); }
-      .pricing-tier__price { font-size: 2.25rem; }
-      .details-grid { grid-template-columns: 1fr; }
-      .hero { min-height: 90vh; }
+      .pricing-tier:first-child { border-right: none; border-bottom: 1px solid var(--border); }
+      .tier-price    { font-size: 2.6rem; }
+      .nav-season    { display: none; }
+      .nav-logo-sub  { display: none; }
     }
-
-    /* ── ANIMATIONS ─────────────────────────────────────────── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .fade-up { animation: fadeUp 0.7s ease forwards; }
-    .fade-up-1 { animation-delay: 0.1s; opacity: 0; }
-    .fade-up-2 { animation-delay: 0.2s; opacity: 0; }
-    .fade-up-3 { animation-delay: 0.35s; opacity: 0; }
-    .fade-up-4 { animation-delay: 0.5s; opacity: 0; }
-    .fade-up-5 { animation-delay: 0.65s; opacity: 0; }
   </style>
 </head>
 <body>
@@ -653,63 +744,84 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <!-- ── HERO ── -->
-  <section class="hero" id="hero">
-    <div class="hero__bg">
-        <img class="hero__bg-img" src="/images/leagues/spring/champlin-park-league.jpg" alt="Champlin Park League — Midwest 3 on 3" />
-      <div class="hero__bg-gradient"></div>
-    </div>
+  <!-- ── STICKY NAV ─────────────────────────────────────────── -->
+  <nav class="nav" id="site-nav">
+    <div class="nav-inner">
 
-    <div class="hero__content">
-      <!-- Badge -->
-      <div class="hero__badge fade-up fade-up-1">
-        <span class="hero__badge-dot"></span>
-        29th Annual · Registration Open
-      </div>
-
-      <!-- Logo -->
-      <div class="hero__logo fade-up fade-up-1">
-        <img class="hero__logo-img" src="/assets/images/mw3-logo.png" alt="Midwest 3 on 3 Logo"
+      <a href="https://www.midwest3on3.com" class="nav-logo" target="_blank" rel="noopener">
+        <img src="/assets/images/mw3-logo.png" alt="Midwest 3 on 3"
              onerror="this.style.display='none'" />
         <div>
-          <div class="hero__logo-text">Midwest 3 on 3</div>
-          <div class="hero__logo-sub">Basketball Leagues</div>
+          <div class="nav-logo-name">Midwest 3 on 3</div>
+          <div class="nav-logo-sub">Basketball Leagues</div>
         </div>
+      </a>
+
+      <div class="nav-season">
+        <span class="nav-dot"></span>
+        spring Season 2026
       </div>
 
-      <!-- Season -->
-      <div class="hero__season fade-up fade-up-2">⚡ spring Season 2026</div>
+      <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="nav-cta" target="_blank" rel="noopener"
+         onclick="trackRegClick('nav')">
+        Register Now
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
 
-      <!-- Title -->
-      <h1 class="hero__title fade-up fade-up-2">Champlin Park League — Midwest 3 on 3</h1>
+    </div>
+  </nav>
 
-      <p class="hero__edition fade-up fade-up-2">29th Annual</p>
+  <!-- ── HERO ───────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-media">
+        <img class="hero-img" src="/images/leagues/spring/champlin-park-league.jpg" alt="Champlin Park League — Midwest 3 on 3" />
+      <div class="hero-overlay"></div>
+    </div>
 
-      <!-- Quick info chips -->
-      <div class="hero__meta fade-up fade-up-3">
-        <div class="hero__meta-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#FF6B1A">
-            <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/><circle cx="12" cy="10" r="2"/>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        29th Annual &middot; Registration Open
+      </div>
+
+      <div class="hero-season-label">🏀 spring Season 2026</div>
+
+      <h1 class="hero-title">Champlin Park League — Midwest 3 on 3</h1>
+
+      <p class="hero-edition">29th Annual</p>
+
+      <div class="hero-chips">
+        <span class="hero-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+            <circle cx="12" cy="10" r="2"/>
           </svg>
           Champlin Park High School, Champlin, MN 55316
-        </div>
-        <div class="hero__meta-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#FF6B1A">
-            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </span>
+
+        <span class="hero-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
           </svg>
           h 22, 29, April 12 &amp; 19 (skip April 5 - Easter)
-        </div>
-        <div class="hero__meta-chip">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" color="#FF6B1A">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </span>
+
+        <span class="hero-chip">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
           </svg>
           4:00 - 9:00 pm
-        </div>
+        </span>
       </div>
 
-      <!-- Primary CTA -->
-      <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="cta-btn fade-up fade-up-4" id="hero-register-btn" target="_blank" rel="noopener"
-         onclick="trackRegClick('hero')">
+      <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="btn btn-primary" id="hero-cta"
+         target="_blank" rel="noopener" onclick="trackRegClick('hero')">
         Register Now
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
@@ -717,223 +829,290 @@
       </a>
     </div>
 
-    <div class="hero__scroll-hint">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <div class="hero-scroll">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <polyline points="6 9 12 15 18 9"/>
       </svg>
       Scroll for details
     </div>
   </section>
 
-  <div class="divider"></div>
+  <!-- ── MAIN CONTENT ───────────────────────────────────────── -->
+  <main class="main">
 
-  <!-- ── DETAILS SECTION ── -->
-  <section class="section" id="details">
-    <p class="section-label">League Details</p>
-    <h2 class="section-title">Everything You Need to Know</h2>
+    <!-- Details Section -->
+    <section class="section" id="details">
+      <p class="section-label reveal">League Details</p>
+      <h2 class="section-title reveal d1">Everything You Need to Know</h2>
 
-    <div class="details-grid">
+      <div class="detail-grid">
 
-      <div class="detail-card">
-        <div class="detail-card__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/><circle cx="12" cy="10" r="2"/>
-          </svg>
-        </div>
-        <div>
-          <div class="detail-card__label">Location</div>
-          <div class="detail-card__value">
-            Champlin Park High School<br/>
-            6025 109th Avenue N<br/>
-            Champlin, MN 55316
-          </div>
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-card__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-        </div>
-        <div>
-          <div class="detail-card__label">Dates</div>
-          <div class="detail-card__value">h 22, 29, April 12 &amp; 19 (skip April 5 - Easter)</div>
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-card__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <div>
-          <div class="detail-card__label">Game Times</div>
-          <div class="detail-card__value">4:00 - 9:00 pm</div>
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-card__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <div>
-          <div class="detail-card__label">Who Can Play</div>
-          <div class="detail-card__value">Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches</div>
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-card__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-        </div>
-        <div>
-          <div class="detail-card__label">Team Format</div>
-          <div class="detail-card__value">Register as a team of 3–6 players. No coaches.</div>
-        </div>
-      </div>
-
-      <div class="detail-card">
-        <div class="detail-card__icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
-        </div>
-        <div>
-          <div class="detail-card__label">Admission</div>
-          <div class="detail-card__value">No spectator admission fees</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- ── PRICING SECTION ── -->
-  <section class="section" id="pricing">
-    <p class="section-label">Registration</p>
-    <h2 class="section-title">Choose Your Registration Window</h2>
-
-    <div class="eligibility-box" style="margin-bottom: 2rem;">
-      <div class="eligibility-box__icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-      </div>
-      <div>
-        <div class="eligibility-box__title">Who's Eligible?</div>
-        <div class="eligibility-box__text">Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches</div>
-        <div class="eligibility-box__rules">
-          <div class="eligibility-rule">Register as a team of 3–6 players</div>
-          <div class="eligibility-rule">No coaches</div>
-          <div class="eligibility-rule">No spectator admission fees</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pricing-wrap">
-      <div class="pricing-header">
-        <div class="pricing-header__icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2">
-            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-          </svg>
-        </div>
-        <div>
-          <div class="pricing-header__title">Team Registration Pricing</div>
-          <div class="pricing-header__sub">Per team · No spectator admission fees</div>
-        </div>
-      </div>
-
-      <div class="pricing-tiers">
-        <div class="pricing-tier">
-          <div class="pricing-tier__label">🔥 Early Bird</div>
-          <div class="pricing-tier__price">$285/team</div>
-          <div class="pricing-tier__unit">per team</div>
-          <div class="pricing-tier__deadline-label">Register by midnight</div>
-          <div class="pricing-tier__deadline">February 26</div>
-          <div class="pricing-savings">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12"/>
+        <div class="detail-card reveal d1">
+          <div class="detail-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s-7-6.75-7-11A7 7 0 0 1 19 10c0 4.25-7 11-7 11z"/>
+              <circle cx="12" cy="10" r="2"/>
             </svg>
-            Shirts arrive Week 1
+          </div>
+          <div>
+            <div class="detail-card-label">Location</div>
+            <div class="detail-card-value">
+              Champlin Park High School<br/>
+              6025 109th Avenue N<br/>
+              Champlin, MN 55316
+            </div>
           </div>
         </div>
 
-        <div class="pricing-tier">
-          <div class="pricing-tier__label pricing-tier__label--final">Final Registration</div>
-          <div class="pricing-tier__price">$300/team</div>
-          <div class="pricing-tier__unit">per team</div>
-          <div class="pricing-tier__deadline-label">Register by midnight</div>
-          <div class="pricing-tier__deadline">March 11</div>
-          <div class="pricing-savings" style="border-color: rgba(153,153,176,0.25); background: rgba(153,153,176,0.08); color: var(--text-muted);">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="20 6 9 17 4 12"/>
+        <div class="detail-card reveal d2">
+          <div class="detail-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
             </svg>
-            Shirts arrive Week 2
+          </div>
+          <div>
+            <div class="detail-card-label">Dates</div>
+            <div class="detail-card-value">h 22, 29, April 12 &amp; 19 (skip April 5 - Easter)</div>
+          </div>
+        </div>
+
+        <div class="detail-card reveal d3">
+          <div class="detail-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div>
+            <div class="detail-card-label">Game Times</div>
+            <div class="detail-card-value">4:00 - 9:00 pm</div>
+          </div>
+        </div>
+
+        <div class="detail-card reveal d1">
+          <div class="detail-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <div>
+            <div class="detail-card-label">Who Can Play</div>
+            <div class="detail-card-value">Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches</div>
+          </div>
+        </div>
+
+        <div class="detail-card reveal d2">
+          <div class="detail-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <div>
+            <div class="detail-card-label">Team Format</div>
+            <div class="detail-card-value">Register as a team of 3–6 players. No coaches.</div>
+          </div>
+        </div>
+
+        <div class="detail-card reveal d3">
+          <div class="detail-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="detail-card-label">Admission</div>
+            <div class="detail-card-value">No spectator admission fees</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
+      <p class="section-label reveal">Registration</p>
+      <h2 class="section-title reveal d1">Choose Your Registration Window</h2>
+
+      <div class="info-box reveal d2">
+        <div class="info-box-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div>
+          <div class="info-box-title">Who's Eligible?</div>
+          <div class="info-box-body">Boys and Girls graduation years 2036 - 2026 (2nd - 12th grades) * Register as a team of 3-6 players. * No coaches</div>
+          <div class="info-box-rules">
+            <div class="info-box-rule">Register as a team of 3–6 players</div>
+            <div class="info-box-rule">No coaches on roster</div>
+            <div class="info-box-rule">No spectator admission fees</div>
           </div>
         </div>
       </div>
 
-      <div class="pricing-cta">
-        <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="cta-btn" id="pricing-register-btn" target="_blank" rel="noopener"
-           onclick="trackRegClick('pricing')">
-          Register Your Team Now
+      <div class="pricing-wrap reveal d3">
+        <div class="pricing-head">
+          <div class="pricing-head-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="pricing-head-title">Team Registration Pricing</div>
+            <div class="pricing-head-sub">Per team &middot; No spectator admission fees</div>
+          </div>
+        </div>
+
+        <div class="pricing-tiers">
+          <div class="pricing-tier">
+            <div class="tier-label">🔥 Early Bird</div>
+            <div class="tier-price">$285/team</div>
+            <div class="tier-unit">per team</div>
+            <div class="tier-deadline-label">Register by midnight on</div>
+            <div class="tier-deadline">February 26</div>
+            <div class="tier-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Shirts arrive Week 1
+            </div>
+          </div>
+
+          <div class="pricing-tier">
+            <div class="tier-label tier-label-muted">Final Registration</div>
+            <div class="tier-price">$300/team</div>
+            <div class="tier-unit">per team</div>
+            <div class="tier-deadline-label">Register by midnight on</div>
+            <div class="tier-deadline">March 11</div>
+            <div class="tier-badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Shirts arrive Week 2
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-cta-row">
+          <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="btn btn-primary" id="pricing-cta"
+             target="_blank" rel="noopener" onclick="trackRegClick('pricing')">
+            Register Your Team Now
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <p class="pricing-note">You'll be redirected to the secure Midwest 3 on 3 registration portal to complete your team signup.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Why Midwest 3 on 3 -->
+    <div class="section-alt">
+      <div class="section-alt-inner">
+        <p class="section-label reveal">Why Midwest 3 on 3</p>
+        <h2 class="section-title reveal d1" style="margin-bottom:0">The Premier Youth Basketball Experience</h2>
+        <div class="why-grid">
+          <div class="why-card reveal d1">
+            <div class="why-icon">🏆</div>
+            <div class="why-title">Competitive Format</div>
+            <div class="why-body">Multiple games per session in a structured league format designed for real competition</div>
+          </div>
+          <div class="why-card reveal d2">
+            <div class="why-icon">👕</div>
+            <div class="why-title">Shirts Included</div>
+            <div class="why-body">Team shirts included with every registration — arrive Week 1 or 2 based on sign-up window</div>
+          </div>
+          <div class="why-card reveal d3">
+            <div class="why-icon">🆓</div>
+            <div class="why-title">Free Admission</div>
+            <div class="why-body">No spectator admission fees — bring the whole family to cheer your team on</div>
+          </div>
+          <div class="why-card reveal d4">
+            <div class="why-icon">📍</div>
+            <div class="why-title">Local Venues</div>
+            <div class="why-body">Leagues across Minnesota and Wisconsin — play close to home all year long</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom CTA -->
+    <section class="section-dark" id="register">
+      <div class="cta-inner">
+        <div class="cta-eyebrow reveal">Don't Miss Out</div>
+        <h2 class="cta-title reveal d1">Spots Fill Up Fast.<br/>Register Today.</h2>
+        <p class="cta-sub reveal d2">
+          Join hundreds of teams across Minnesota and Wisconsin in the premier 3-on-3 basketball experience.
+          Dates: h 22, 29, April 12 &amp; 19 (skip April 5 - Easter).
+        </p>
+        <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="btn btn-primary reveal d3" id="bottom-cta"
+           target="_blank" rel="noopener" onclick="trackRegClick('bottom')">
+          Register Now — It's Time to Play
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
           </svg>
         </a>
-        <p class="pricing-note">You'll be redirected to the secure Midwest 3 on 3 registration portal to complete your team signup.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <div class="divider"></div>
+  </main>
 
-  <!-- ── BOTTOM CTA SECTION ── -->
-  <section class="bottom-cta" id="register">
-    <div class="bottom-cta__content">
-      <div class="bottom-cta__eyebrow">Don't Miss Out</div>
-      <h2 class="bottom-cta__title">Spots Fill Up Fast.<br/>Register Today.</h2>
-      <p class="bottom-cta__sub">
-        Join hundreds of teams across Minnesota and Wisconsin in the premier 3-on-3 basketball experience.
-        Dates: h 22, 29, April 12 &amp; 19 (skip April 5 - Easter).
-      </p>
-      <a href="https://midwest3on3.sportngin.com/register/form/661469828" class="cta-btn" id="bottom-register-btn" target="_blank" rel="noopener"
-         onclick="trackRegClick('bottom')">
-        Register Now — It's Time to Play
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- ── FOOTER ── -->
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <footer class="footer">
     <p>
       &copy; 2026 Midwest 3 on 3 Basketball &mdash;
       <a href="https://www.midwest3on3.com" target="_blank" rel="noopener">midwest3on3.com</a>
+      &middot;
+      <a href="/leagues" style="color:#555">All Leagues</a>
     </p>
-    <p style="margin-top: 4px;">
-      <a href="https://www.midwest3on3.com/leagues/spring/champlin-park-league" target="_blank" rel="noopener" style="color: var(--text-muted);">View on midwest3on3.com →</a>
+    <p style="margin-top:5px">
+      <a href="https://www.midwest3on3.com/leagues/spring/champlin-park-league" target="_blank" rel="noopener" style="color:#444">View on midwest3on3.com &rarr;</a>
     </p>
   </footer>
 
-  <!-- ── TRACKING JS ── -->
+  <!-- ── SCRIPTS ────────────────────────────────────────────── -->
   <script>
-    // Register Now click tracking
+    // Nav shadow on scroll
+    var nav = document.getElementById('site-nav');
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Intersection Observer — scroll reveal
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      observer.observe(el);
+    });
+
+    // Register Now tracking
     function trackRegClick(position) {
       var league = 'champlin-park-league';
       var season = 'spring';
 
-      // Meta Pixel: Lead event on Register Now click
       if (typeof fbq !== 'undefined') {
         fbq('track', 'Lead', {
           content_name: 'Champlin Park League — Midwest 3 on 3',
@@ -943,7 +1122,6 @@
         });
       }
 
-      // GTM dataLayer push
       if (typeof dataLayer !== 'undefined') {
         dataLayer.push({
           event: 'register_click',
@@ -954,7 +1132,6 @@
         });
       }
 
-      // Server-side CAPI track call (fire and forget)
       try {
         fetch('/api/track', {
           method: 'POST',
@@ -977,14 +1154,13 @@
       return match ? match.pop() : '';
     }
 
-    // Scroll depth tracking
-    var scrollDepths = [25, 50, 75, 100];
-    var depthsFired = {};
+    // Scroll depth
+    var depths = [25, 50, 75, 100], fired = {};
     window.addEventListener('scroll', function() {
       var pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      scrollDepths.forEach(function(d) {
-        if (pct >= d && !depthsFired[d]) {
-          depthsFired[d] = true;
+      depths.forEach(function(d) {
+        if (pct >= d && !fired[d]) {
+          fired[d] = true;
           if (typeof dataLayer !== 'undefined') {
             dataLayer.push({ event: 'scroll_depth', depth: d, league: 'champlin-park-league' });
           }

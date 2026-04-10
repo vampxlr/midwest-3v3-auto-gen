@@ -221,7 +221,6 @@
       gap: 1.5rem;
     }
 
-    .status-card__info {}
     .status-card__title {
       font-size: 1.1rem;
       font-weight: 700;
@@ -233,7 +232,22 @@
       color: var(--text-muted);
     }
     #last-updated { color: var(--orange-light); font-weight: 600; }
+    .vercel-note {
+      display: none;
+      color: var(--yellow);
+      font-weight: 600;
+      margin-left: 10px;
+      font-size: 0.8rem;
+    }
+    .vercel-note.active {
+      display: inline;
+    }
 
+    .btn-update-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+    
     .btn-update {
       display: flex;
       align-items: center;
@@ -487,14 +501,19 @@
         <div class="status-card__title">League Landing Pages</div>
         <div class="status-card__sub">
           Last updated: <span id="last-updated">Never</span>
+          <span id="vercel-note" class="vercel-note">
+            (Vercel Detected: Update Disabled)
+          </span>
         </div>
       </div>
-      <button class="btn-update" id="update-btn" onclick="triggerUpdate()">
-        <svg id="update-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-          <path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
-        </svg>
-        Update All Leagues
-      </button>
+      <div class="btn-update-wrapper" id="update-btn-wrapper">
+        <button class="btn-update" id="update-btn" onclick="triggerUpdate()">
+          <svg id="update-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+            <path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+          Update All Leagues
+        </button>
+      </div>
     </div>
 
     <!-- Log Output -->
@@ -590,6 +609,15 @@
         if (data.lastUpdated) {
           document.getElementById('last-updated').textContent =
             new Date(data.lastUpdated).toLocaleString();
+        }
+        if (data.isVercel) {
+          document.getElementById('vercel-note').classList.add('active');
+          var updateBtn = document.getElementById('update-btn');
+          updateBtn.disabled = true;
+          updateBtn.removeAttribute('onclick');
+          
+          // Add tooltip to wrapper because disabled buttons don't fire generic hover events reliably on all browsers
+          document.getElementById('update-btn-wrapper').setAttribute('title', 'Disabled on Vercel. Run the crawler locally and update the repository.');
         }
         renderLeagues(allLeagues);
       })
