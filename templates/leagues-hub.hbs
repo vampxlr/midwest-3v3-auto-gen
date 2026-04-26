@@ -591,10 +591,11 @@
         <a class="league-card reveal" href="/leagues/{{season}}/{{slug}}"
            data-name="{{name}}" data-city="{{location.city}}">
           <div class="card-img">
-            {{#if localImage}}
+            {{#if imageUrl}}
+              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy"
+                   onerror="this.onerror=null;this.src='{{#if localImage}}{{localImage}}{{else}}/assets/images/basketball-default.jpg{{/if}}'" />
+            {{else if localImage}}
               <img src="{{localImage}}" alt="{{name}}" loading="lazy" />
-            {{else if imageUrl}}
-              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy" />
             {{else}}
               <img src="/assets/images/basketball-default.jpg" alt="{{name}}" loading="lazy" />
             {{/if}}
@@ -651,10 +652,11 @@
         <a class="league-card reveal" href="/leagues/{{season}}/{{slug}}"
            data-name="{{name}}" data-city="{{location.city}}">
           <div class="card-img">
-            {{#if localImage}}
+            {{#if imageUrl}}
+              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy"
+                   onerror="this.onerror=null;this.src='{{#if localImage}}{{localImage}}{{else}}/assets/images/basketball-default.jpg{{/if}}'" />
+            {{else if localImage}}
               <img src="{{localImage}}" alt="{{name}}" loading="lazy" />
-            {{else if imageUrl}}
-              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy" />
             {{else}}
               <img src="/assets/images/basketball-default.jpg" alt="{{name}}" loading="lazy" />
             {{/if}}
@@ -711,10 +713,11 @@
         <a class="league-card reveal" href="/leagues/{{season}}/{{slug}}"
            data-name="{{name}}" data-city="{{location.city}}">
           <div class="card-img">
-            {{#if localImage}}
+            {{#if imageUrl}}
+              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy"
+                   onerror="this.onerror=null;this.src='{{#if localImage}}{{localImage}}{{else}}/assets/images/basketball-default.jpg{{/if}}'" />
+            {{else if localImage}}
               <img src="{{localImage}}" alt="{{name}}" loading="lazy" />
-            {{else if imageUrl}}
-              <img src="{{imageUrl}}" alt="{{name}}" loading="lazy" />
             {{else}}
               <img src="/assets/images/basketball-default.jpg" alt="{{name}}" loading="lazy" />
             {{/if}}

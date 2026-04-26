@@ -10,7 +10,7 @@
   <!-- Open Graph for Facebook Ads previews -->
   <meta property="og:title" content="{{title}}" />
   <meta property="og:description" content="{{dates}} · {{location.venue}} · {{eligibility}}" />
-  <meta property="og:image" content="{{#if localImage}}{{siteDomain}}{{localImage}}{{else}}{{imageUrl}}{{/if}}" />
+  <meta property="og:image" content="{{#if imageUrl}}{{imageUrl}}{{else if localImage}}{{siteDomain}}{{localImage}}{{/if}}" />
   <meta property="og:url" content="{{siteDomain}}/leagues/{{season}}/{{slug}}" />
   <meta property="og:type" content="website" />
 
@@ -782,10 +782,12 @@
   <!-- ── HERO ───────────────────────────────────────────────── -->
   <section class="hero">
     <div class="hero-media">
-      {{#if localImage}}
+      {{#if imageUrl}}
+        <img class="hero-img" src="{{imageUrl}}"
+             alt="{{title}}"
+             onerror="this.onerror=null;this.src='{{#if localImage}}{{localImage}}{{else}}/assets/images/basketball-hero.jpg{{/if}}'" />
+      {{else if localImage}}
         <img class="hero-img" src="{{localImage}}" alt="{{title}}" />
-      {{else if imageUrl}}
-        <img class="hero-img" src="{{imageUrl}}" alt="{{title}}" />
       {{else}}
         <img class="hero-img" src="/assets/images/basketball-hero.jpg" alt="Basketball" />
       {{/if}}
