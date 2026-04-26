@@ -213,7 +213,7 @@ app.post('/api/track', (req, res) => {
 
 // ─── Root redirect to portal ───────────────────────────────────────────────
 app.get('/', (req, res) => {
-  res.redirect('/portal');
+  res.redirect('/leagues/');
 });
 
 // ─── Export for Vercel (serverless) ───────────────────────────────────────

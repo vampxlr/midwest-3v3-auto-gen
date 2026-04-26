@@ -9,6 +9,7 @@ cp .env.example .env   # edit .env with your real values
 node server.js
 ```
 
+Visit `http://localhost:3000` to see the leagues index.
 Visit `http://localhost:3000/portal` to access the admin portal.
 
 ## Project Structure
